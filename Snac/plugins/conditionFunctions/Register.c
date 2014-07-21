@@ -82,5 +82,9 @@ void _SnacCondFunc_Construct( void* component, Stg_ComponentFactory* cf, void* d
 	ConditionFunction_Register_Add(
 			context->condFunc_Register,
 			ConditionFunction_New( _SnacCondFunc_ObliqueRift,"SnacCF_ObliqueRift" ) );
+	ConditionFunction_Register_Add(
+			context->condFunc_Register,
+			ConditionFunction_New(_SnacCondFunc_Mfactor,"SnacCF_Mfactor" ) );
+
 }
 

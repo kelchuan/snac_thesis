@@ -23,23 +23,14 @@
 	<param name="topo_kappa"> 0.0 </param>
 	
 	<!-- Extension modules -->
-	<!--
-		<param> SnacWinklerG3Force </param>
-		<param> SnacRemesher </param>
-		<param> SnacHydroStaticIC </param>
-		<param> SnacCustomCartesian </param>
-		<param> SnacViscoPlastic </param>
-		<param> SnacVPSeeds </param>
-		<param> SnacPlSeeds </param>
-	-->
+
 	<list name="extensions">
+                <param> SnacRemesher </param>
 		<param> SnacPlastic </param>
-		<param> SnacCondFunc </param>
+         	<param> SnacCondFunc </param> 
 	</list>
 	
 	<struct name="mesh">
-		<!--
-		-->
 	        <param name="shadowDepth"> 1 </param>
 		<param name="decompDims"> 2 </param>
 
@@ -76,15 +67,15 @@
 		<param name="plstrain0"> 0.0 </param>
 		<param name="plstrain1"> 0.01 </param>
 		<param name="plstrain2"> 1000.0 </param>
-		<param name="frictionAngle0"> 0.0 </param>
-		<param name="frictionAngle1"> 0.0 </param>
-		<param name="frictionAngle2"> 0.0 </param>
+		<param name="frictionAngle0"> 30.0 </param>
+		<param name="frictionAngle1"> 30.0 </param>
+		<param name="frictionAngle2"> 30.0 </param>
 		<param name="dilationAngle0"> 0.0 </param>
 		<param name="dilationAngle1"> 0.0 </param>
 		<param name="dilationAngle2"> 0.0 </param>
 		<param name="cohesion0"> 2.0e+07 </param>
-		<param name="cohesion1"> 1.0e+07 </param>
-		<param name="cohesion2"> 1.0e+07 </param>
+		<param name="cohesion1"> 1.0e+06 </param>
+		<param name="cohesion2"> 1.0e+02 </param>
 		<param name="ten_off"> 1.0e+12 </param>
 	</struct>
 	<struct name="mat_strong">
@@ -100,15 +91,15 @@
 		<param name="plstrain0"> 0.0 </param>
 		<param name="plstrain1"> 0.01 </param>
 		<param name="plstrain2"> 1000.0 </param>
-		<param name="frictionAngle0"> 0.0 </param>
-		<param name="frictionAngle1"> 0.0 </param>
-		<param name="frictionAngle2"> 0.0 </param>
+		<param name="frictionAngle0"> 30.0 </param>
+		<param name="frictionAngle1"> 30.0 </param>
+		<param name="frictionAngle2"> 30.0 </param>
 		<param name="dilationAngle0"> 0.0 </param>
 		<param name="dilationAngle1"> 0.0 </param>
 		<param name="dilationAngle2"> 0.0 </param>
 		<param name="cohesion0"> 2.0e+08 </param>
 		<param name="cohesion1"> 1.0e+08 </param>
-		<param name="cohesion2"> 1.0e+08 </param>
+		<param name="cohesion2"> 1.0e+02 </param>
 		<param name="ten_off"> 1.0e+12 </param>
 	</struct>
 	<struct name="mat_weak">
@@ -124,15 +115,15 @@
 		<param name="plstrain0"> 0.0 </param>
 		<param name="plstrain1"> 0.01 </param>
 		<param name="plstrain2"> 1000.0 </param>
-		<param name="frictionAngle0"> 0.0 </param>
-		<param name="frictionAngle1"> 0.0 </param>
-		<param name="frictionAngle2"> 0.0 </param>
+		<param name="frictionAngle0"> 30.0 </param>
+		<param name="frictionAngle1"> 30.0 </param>
+		<param name="frictionAngle2"> 30.0 </param>
 		<param name="dilationAngle0"> 0.0 </param>
 		<param name="dilationAngle1"> 0.0 </param>
 		<param name="dilationAngle2"> 0.0 </param>
 		<param name="cohesion0"> 2.0e+06 </param>
 		<param name="cohesion1"> 1.0e+06 </param>
-		<param name="cohesion2"> 1.0e+06 </param>
+		<param name="cohesion2"> 1.0e+02 </param>
 		<param name="ten_off"> 1.0e+12 </param>
 	</struct>
 	</list>
@@ -144,9 +135,9 @@
 		<param name="remeshCondition"> onMinLengthScale </param>
 	-->
 	<param name="remeshCondition"> onMinLengthScale </param>
-	<param name="remeshTimeStepCriterion"> 15000 </param>
-	<param name="remeshLengthCriterion"> 45.0 </param>
-	<param name="bottomResotre"> on </param>
+	<param name="remeshTimeStepCriterion"> 7 </param>
+	<param name="remeshLengthCriterion"> 0.7 </param>
+	<param name="bottomRestore"> on </param>
 	
 	<!-- node ICs -->
 	<struct name="nodeICs">

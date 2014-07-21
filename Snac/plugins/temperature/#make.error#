@@ -1,0 +1,6 @@
+VariableConditions.c:97:35: error: expected ';' in 'for' statement specifier
+VariableConditions.c:97:35: error: expected ';' in 'for' statement specifier
+VariableConditions.c:101:37: error: expected ';' in 'for' statement specifier
+VariableConditions.c:101:37: error: expected ';' in 'for' statement specifier
+7 warnings and 4 errors generated.
+make[1]: *** [/Users/Tian/opt/snac/build/tmp/mod-SnacTemperaturemodule.so/VariableConditions.o] Error 1

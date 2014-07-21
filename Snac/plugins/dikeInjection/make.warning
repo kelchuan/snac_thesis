@@ -1,0 +1,5 @@
+Constitutive.c:127:14: warning: incompatible pointer types initializing 'Coord *' (aka 'double (*)[3]') with an expression of type 'Coord' (aka 'double [3]'); take the address with & [-Wincompatible-pointer-types]
+Constitutive.c:67:28: warning: unused variable 'viscoplasticElement' [-Wunused-variable]
+Constitutive.c:77:9: warning: unused variable 'elem_dX' [-Wunused-variable]
+3 warnings generated.
+ld: warning: directory not found for option '-L/sw/lib'

@@ -1,0 +1,4 @@
+Constitutive.c:224:97: warning: passing 'const char [25]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+Constitutive.c:65:17: warning: unused variable 'temperatureEP' [-Wunused-variable]
+2 warnings generated.
+ld: warning: directory not found for option '-L/sw/lib'

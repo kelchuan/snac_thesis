@@ -1,0 +1,14 @@
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacCondFunc\" -DPLUGIN_NAME=SnacCondFunc -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacCondFuncmodule.so/SnacCondFunc_ElementCondFunc.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      SnacCondFunc_ElementCondFunc.c
+SnacCondFunc_ElementCondFunc.c:47:17: warning: unused variable 'element' [-Wunused-variable]
+        Snac_Element*           element = Snac_Element_At( context, element_lI );
+                                ^
+SnacCondFunc_ElementCondFunc.c:121:27: warning: unused variable 'global_K_range' [-Wunused-variable]
+        Element_GlobalIndex             global_K_range = decomp->elementGlobal3DCounts[2];
+                                        ^
+SnacCondFunc_ElementCondFunc.c:119:27: warning: unused variable 'global_I_range' [-Wunused-variable]
+        Element_GlobalIndex             global_I_range = decomp->elementGlobal3DCounts[0];
+                                        ^
+3 warnings generated.
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacCondFunc\" -DPLUGIN_NAME=SnacCondFunc -Wall -g   -o /Users/Tian/opt/snac/build/tmp/mod-SnacCondFuncmodule.so/SnacCondFuncmodule.so /Users/Tian/opt/snac/build/tmp/mod-SnacCondFuncmodule.so/Register.o /Users/Tian/opt/snac/build/tmp/mod-SnacCondFuncmodule.so/SnacCondFunc_NodeCondFunc.o /Users/Tian/opt/snac/build/tmp/mod-SnacCondFuncmodule.so/SnacCondFunc_ElementCondFunc.o  -bundle -flat_namespace -undefined suppress  -L/Users/Tian/opt/snac/build/lib   -L/Users/Tian/opt/snac/build/lib  -lSnac -lStGermain  -L/Users/Tian/opt/snac/build/lib -lmpi -L/opt/local/lib/openmpi-mp -lmpi -L/sw/lib    -L/opt/local/lib -lxml2 -lz -lpthread -liconv -lm   -lm -lmx            
+ld: warning: directory not found for option '-L/sw/lib'
+/bin/cp -f /Users/Tian/opt/snac/build/tmp/mod-SnacCondFuncmodule.so/SnacCondFuncmodule.so /Users/Tian/opt/snac/build/lib/SnacCondFuncmodule.so

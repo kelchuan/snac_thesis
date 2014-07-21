@@ -47,6 +47,10 @@
 	#define PATH_MAX 1024
 #endif
 
+#ifndef PI
+     #define PI 3.14159265358979323846
+#endif
+
 extern void effectiveDensity( void* _context );
 
 void _SnacTemperature_Top2BottomSweep( Node_LocalIndex node_lI, Variable_Index var_I, void* _context, void* result ) {
@@ -71,6 +75,96 @@ void _SnacTemperature_Top2BottomSweep( Node_LocalIndex node_lI, Variable_Index v
 		printf( "Top: %8g, Bottom: %8g, node_I: %3u, node_gI: %3u, iijk: { %3u, %3u, %3u, }, *temperature: %g\n", contextExt->topTemp, contextExt->bottomTemp, node_lI, node_gI, ijk[0], ijk[1], ijk[2], *temperature );
 	#endif
 }
+
+
+
+/*
+void _SnacTemperature_Mfactoric(Index element_lI, Node_LocalIndex node_lI, Variable_Index var_I, void* _context, void* result ) {
+  Snac_Context*                   context = (Snac_Context*)_context;
+  Snac_Element*           element = Snac_Element_At( context, element_lI );
+  SnacTemperature_Context*        contextExt = ExtensionManager_Get(
+								    context->extensionMgr,
+								    context,
+								    SnacTemperature_ContextHandle );
+  
+  double*                         temperature = (double*)result;
+    /* Stuff for convenience 
+  Mesh*                           mesh = context->mesh;
+  MeshLayout*                     layout = (MeshLayout*)mesh->layout;
+  HexaMD*                         decomp = (HexaMD*)layout->decomp;
+  IJK                             ijk;
+  Element_GlobalIndex             global_I_range = decomp->elementGlobal3DCounts[0];
+  Element_GlobalIndex             global_J_range = decomp->elementGlobal3DCounts[1];
+  Element_GlobalIndex             global_K_range = decomp->elementGlobal3DCounts[2];
+
+  Element_GlobalIndex             element_gI = _MeshDecomp_Element_LocalToGlobal1D( decomp, element_lI );
+  unsigned int                    matID=0, tetra_I;
+
+  RegularMeshUtils_Element_1DTo3D( decomp, element_gI, &ijk[0], &ijk[1], &ijk[2] );
+
+
+
+       *temperature = contextExt->topTemp; 
+  
+
+  if(  (ijk[1] < 2*global_J_range/3) )
+    {
+      *temperature = contextExt->bottomTemp;
+    }
+
+
+
+
+  
+
+        #if 0
+  printf( "Top: %8g, Bottom: %8g, node_I: %3u, node_gI: %3u, iijk: { %3u, %3u, %3u, }, *temperature\
+: %g\n", contextExt->topTemp, contextExt->bottomTemp, node_lI, node_gI, ijk[0], ijk[1], ijk[2], *temperature );
+        #endif
+}
+
+*/
+
+
+
+
+
+
+
+
+/*void _SnacTemperature_Mfactorbc( Node_LocalIndex node_lI, Variable_Index var_I, void* _context \
+				       , void* result ) {
+  Snac_Context*                   context = (Snac_Context*)_context;
+  SnacTemperature_Context*        contextExt = ExtensionManager_Get(
+								    context->extensionMgr,
+								    context,
+								    SnacTemperature_ContextHandle );
+  double*                         temperature = (double*)result;
+  MeshLayout*                     meshLayout = (MeshLayout*)context->meshLayout;
+  HexaMD*                         decomp = (HexaMD*)meshLayout->decomp;
+  Node_GlobalIndex                node_gI;
+  IJK                             ijk;
+  const Index                     jCount = decomp->nodeGlobal3DCounts[1];
+
+  node_gI = context->mesh->nodeL2G[node_lI];
+  RegularMeshUtils_Node_1DTo3D( decomp, node_gI, &ijk[0], &ijk[1], &ijk[2] );
+
+  eta = contextExt->
+
+  *temperature = (contextExt->bottomTemp - contextExt->topTemp) * 2 / PI^1/2 * + (contextExt->topTemp - contextExt->bottomTemp) / (jC \
+											    ount - 1) * ijk[1];
+
+        #if 0
+  printf( "Top: %8g, Bottom: %8g, node_I: %3u, node_gI: %3u, iijk: { %3u, %3u, %3u, },\
+ *temperature: %g\n", contextExt->topTemp, contextExt->bottomTemp, node_lI, node_gI, ijk[0], ijk[1],\
+	  ijk[2], *temperature );
+        #endif
+}
+
+*/
+
+
+
 
 
 void _SnacTemperature_Top2BottomSweep_Spherical(
@@ -132,9 +226,14 @@ void _SnacTemperature_Citcom_Compatible(
 
 	const Snac_Material*            material = &context->materialProperty[0];
 	const double                    rTemp = contextExt->bottomTemp;
-	const double                    R = 6371000.0;
+	const double                    topTemp = contextExt->topTemp;
+        const double                    R = 6371000.0;
 	const double                    kappa = 1.0e-06;
-	double                          scalet = R*R/kappa/(1.0e+06*365.25*24.0*3600.0);
+	//later added (variable from input file)
+	const double                    v_stretch = contextExt->v_stretch; 
+	//        const double                    vx = 
+	//later added
+        double                          scalet = R*R/kappa/(1.0e+06*365.25*24.0*3600.0);
 	double                          age = 2.01f, temp=0.0f;
 
 	double*                         temperature = (double*)result;
@@ -143,16 +242,20 @@ void _SnacTemperature_Citcom_Compatible(
 	double                          rMin = Dictionary_Entry_Value_AsDouble( Dictionary_Get( meshStruct, "rMin" ) );
 	double                          rMax = Dictionary_Entry_Value_AsDouble( Dictionary_Get( meshStruct, "rMax" ) );
 	double                          r = sqrt((*coord)[0]*(*coord)[0] + (*coord)[1]*(*coord)[1] + (*coord)[2]*(*coord)[2]);
-	IJK                             ijk;
+	//	fprintf(stderr,"(*coord)[0]=%e, (*coord)[1]=%e, (*coord)[2]=%e\n",(*coord)[0],(*coord)[1],(*coord)[2]);
+	//	fprintf(stderr,"r = %e", r);
+        IJK                             ijk;
 	const Node_GlobalIndex		midI = (decomp->nodeGlobal3DCounts[0] + 1) / 2 - 1;
 	Node_GlobalIndex		lmidI;
+
+    
 
 	RegularMeshUtils_Node_1DTo3D( decomp, node_gI, &ijk[0], &ijk[1], &ijk[2] );
 
 	/* for Cartesian case */
 	rMin = R - 3.0e+03f;
 	rMax = R;
-	r = rMax + (*coord)[1];
+	r = rMax + (((*coord)[1]+5000));    //+5 means depth above 5km is set to 0 instead of erf
 	/*ccccc*/
 
 	assert( (rMin != 0.0 && rMax != 0.0) );
@@ -160,18 +263,38 @@ void _SnacTemperature_Citcom_Compatible(
 	rMin /= R;
 	rMax /= R;
 
-#if 0
-	if( ijk[0] >= midI-5 && ijk[0] <= midI+5 ) {
-		age = 0.01f + 1.0f*abs(ijk[0]-midI)/5.0*5.01;
-	}
+#if 1
+	//if( ijk[0] >= midI-5 && ijk[0] <= midI+5 ) {
+	age = 0.01f + 1000.0f*abs(ijk[0]-midI)/v_stretch/(1.0e+06*365.25*24.0*3600.0);
+	//	age = 0.01f + 1000.0f*abs(ijk[0]-midI)/(9.7e-10)/(1.0e+06*365.25*24.0*3600.0);
+		//}
 #endif
 #if 0
 	age = 0.5 - 0.2*ijk[2]/(decomp->nodeGlobal3DCounts[2]-1);
 #endif
 
-	temp = (rMax-r) * 0.5f / sqrt(age/scalet);
-	*temperature = rTemp * erf(temp);
-	if( (*temperature) < 0.0) (*temperature) = 0.0f;
+	temp = (rMax - r) * 0.5f / sqrt(age/scalet);
+	//	fprintf(stderr, "(*coord)[1]=%e\n", (*coord)[1]);           
+	/*FILE	*fp = fopen( "out_file.txt", "w" ); // Open file for writing
+	 while ((*coord)[1] != ){
+	fprintf(fp, "(*coord)[1]=%e\n", (*coord)[1]);	
+	}
+
+	fclose(fp);
+	*/
+        //later add
+
+        //later add
+	//Geodynamics P287 & Tucolke 2008 repository
+	*temperature = rTemp * erf(temp);	
+	//for ((*coord)[1]>-5){
+	//	for(ijk[1] = 0; ijk[1]<5; ijk[1]++){ 
+	/*        while ((*coord)[1]>-5000){
+         *temperature = contextExt->topTemp;
+	 }
+	*/
+ 
+	        if( (*temperature) < 0.0) (*temperature) = 0.0f;
 }
 
 void _SnacTemperature_InitialConditions( void* _context ) {

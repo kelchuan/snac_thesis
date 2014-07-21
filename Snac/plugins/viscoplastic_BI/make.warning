@@ -1,0 +1,9 @@
+ConstructExtensions.c:50:42: warning: unused variable 'tmpElementExt' [-Wunused-variable]
+1 warning generated.
+Constitutive.c:372:97: warning: passing 'const char [30]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+Constitutive.c:112:13: warning: unused variable 'srexponent2' [-Wunused-variable]
+Constitutive.c:111:13: warning: unused variable 'srexponent1' [-Wunused-variable]
+3 warnings generated.
+Output.c:100:9: warning: unused variable 'avgPlasticStrain' [-Wunused-variable]
+1 warning generated.
+ld: warning: directory not found for option '-L/sw/lib'

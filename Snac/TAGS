@@ -1,0 +1,1951 @@
+
+libSnac/src/Context.c,2190
+	#define PATH_MAX 60,2193
+#define DEBUG63,2224
+const Type Snac_Context_Type 66,2272
+const Name Snac_EP_LoopNodesEnergy 70,2358
+const Name Snac_EP_LoopElementsEnergy 71,2423
+const Name Snac_EP_CalcStresses 72,2494
+const Name Snac_EP_StrainRate 73,2553
+const Name Snac_EP_Stress 74,2609
+const Name Snac_EP_Constitutive 75,2657
+const Name Snac_EP_LoopNodesMomentum 76,2716
+const Name Snac_EP_Force 77,2785
+const Name Snac_EP_ForceBC 78,2831
+const Name Snac_EP_UpdateNodeMomentum 79,2881
+const Name Snac_EP_LoopElementsMomentum 80,2952
+const Name Snac_EP_UpdateElementMomentum 81,3026
+const Name Snac_EP_RheologyUpdate 82,3102
+const Name Snac_DtType_Constant 85,3199
+const Name Snac_DtType_Dynamic 86,3258
+const Name Snac_DtType_Wave 87,3316
+Snac_Context* Snac_Context_New(90,3373
+void Snac_Context_Init(104,3776
+Snac_Context* _Snac_Context_New(155,5508
+void _Snac_Context_Init(206,7347
+void _Snac_Context_Delete(649,24023
+void _Snac_Context_Print(692,25137
+void _Snac_Context_Build(707,25438
+void _Snac_Context_InitialConditions(742,26669
+void _Snac_Context_InitializeMaterialProperties(776,28174
+void getMaterial_Dictionary_Entry_Values(826,30215
+void printMaterial_Properties(916,36476
+void Snac_Context_TimeStepZero(978,40437
+double _Snac_Context_Dt(1039,43191
+void _Snac_Context_SetDt(1047,43379
+void _Snac_Context_BoundaryConditions(1056,43578
+void _Snac_Context_Solve(1063,43762
+void _Snac_Context_CalcStresses(1102,45081
+void _Snac_Context_LoopNodes(1120,45806
+void _Snac_Context_LoopElements(1156,46822
+void _Snac_Context_LoopElements_Restart(1186,47847
+void _Snac_Context_Sync(1208,48701
+void _Snac_Context_WriteLoopInfo(1271,50889
+void _Snac_Context_DumpLoopInfo(1286,51172
+void _Snac_Context_CheckpointLoopInfo(1294,51402
+void _Snac_Context_InitOutput(1302,51658
+void _Snac_Context_InitDump(1311,51831
+void _Snac_Context_InitCheckpoint(1393,54828
+void _Snac_Context_WriteOutput(1436,56415
+void _Snac_Context_Dump(1447,56645
+void _Snac_Context_Checkpoint(1471,57371
+void _Snac_Context_DumpStressTensor(1486,57824
+void _Snac_Context_CheckpointStressTensor(1514,59156
+Bool isTimeToDump(1534,60031
+Bool isTimeToCheckpoint(1545,60248
+
+libSnac/src/Context_20070327.c,1827
+	#define PATH_MAX 59,2172
+const Type Snac_Context_Type 63,2236
+const Name Snac_EP_LoopNodesEnergy 67,2322
+const Name Snac_EP_LoopElementsEnergy 68,2387
+const Name Snac_EP_CalcStresses 69,2458
+const Name Snac_EP_StrainRate 70,2517
+const Name Snac_EP_Stress 71,2573
+const Name Snac_EP_Constitutive 72,2621
+const Name Snac_EP_LoopNodesMomentum 73,2680
+const Name Snac_EP_Force 74,2749
+const Name Snac_EP_ForceBC 75,2795
+const Name Snac_EP_UpdateNodeMomentum 76,2845
+const Name Snac_EP_LoopElementsMomentum 77,2916
+const Name Snac_EP_UpdateElementMomentum 78,2990
+const Name Snac_EP_RheologyUpdate 79,3066
+const Name Snac_DtType_Constant 82,3163
+const Name Snac_DtType_Dynamic 83,3222
+Snac_Context* Snac_Context_New(86,3282
+void Snac_Context_Init(100,3685
+Snac_Context* _Snac_Context_New(151,5417
+void _Snac_Context_Init(202,7256
+void _Snac_Context_Delete(610,21976
+void _Snac_Context_Print(657,23225
+void _Snac_Context_Build(672,23526
+void _Snac_Context_InitialConditions(756,26611
+void _Snac_Context_InitializeMaterialProperties(796,28330
+void getMaterial_Dictionary_Entry_Values(846,30371
+void printMaterial_Properties(936,36632
+void Snac_Context_TimeStepZero(998,40591
+double _Snac_Context_Dt(1081,43721
+void _Snac_Context_SetDt(1093,44051
+void _Snac_Context_BoundaryConditions(1102,44250
+void _Snac_Context_Solve(1109,44434
+void _Snac_Context_CalcStresses(1160,46215
+void _Snac_Context_LoopBoundaryNodesPre(1178,46940
+void _Snac_Context_LoopBoundaryNodesPost(1225,48286
+void _Snac_Context_LoopNodes(1282,50444
+void _Snac_Context_LoopElements(1365,52756
+void _Snac_Context_Sync(1396,53782
+void DumpLoopInfo(1544,58398
+void DumpForceCheckSum(1550,58582
+void _Snac_Context_InitDump(1589,59884
+void _Snac_Context_DumpStressTensor(1684,63654
+void _Snac_Context_DumpPhaseIndex(1703,64597
+
+libSnac/src/Element.c,129
+void Snac_Element_Tetrahedra_Surface_Print(45,1844
+void Snac_Element_Tetrahedra_Print(54,2240
+void Snac_Element_Print(79,3616
+
+libSnac/src/EntryPoint.c,596
+const Type Snac_EntryPoint_Type 56,2100
+Snac_EntryPoint* Snac_EntryPoint_New(59,2155
+void Snac_EntryPoint_Init(64,2406
+Snac_EntryPoint* _Snac_EntryPoint_New(86,3113
+void _Snac_EntryPoint_Init(116,3889
+Func_Ptr _Snac_EntryPoint_GetRun(125,4212
+void _Snac_EntryPoint_Run_UpdateElementMomentum(153,4911
+void _Snac_EntryPoint_Run_StrainRate(176,5570
+void _Snac_EntryPoint_Run_Stress(198,6134
+void _Snac_EntryPoint_Run_Force(220,6686
+void _Snac_EntryPoint_Run_UpdateNodeMomentum(247,7391
+void _Snac_EntryPoint_Run_Constitutive(271,8036
+void Snac_EntryPoint_ChangeRunConstitutive(293,8607
+
+libSnac/src/Finalise.c,28
+Bool Snac_Finalise(37,1681
+
+libSnac/src/Force.c,25
+void Snac_Force(53,2012
+
+libSnac/src/Init.c,24
+Bool Snac_Init(37,1677
+
+libSnac/src/Material.c,34
+void Snac_Material_Print(42,1764
+
+libSnac/src/Mesh.c,118
+void Snac_Mesh_Delete(45,1806
+void Snac_Mesh_Print(54,1959
+void Snac_Mesh_Build(63,2200
+void Snac_Mesh_IC(74,2516
+
+libSnac/src/Node.c,30
+void Snac_Node_Print(42,1768
+
+libSnac/src/Parallel.c,2060
+#define LBA	44,1928
+#define LB	45,1943
+#define LBC	46,1957
+#define LA	47,1972
+#define L	48,1986
+#define LC	49,1999
+#define LTA	50,2013
+#define LT	51,2028
+#define LTC	52,2042
+#define BA	53,2057
+#define B	54,2071
+#define BC	55,2084
+#define A	56,2098
+#define C	57,2111
+#define TA	58,2124
+#define T	59,2138
+#define TC	60,2151
+#define RBA	61,2165
+#define RB	62,2180
+#define RBC	63,2194
+#define RA	64,2209
+#define R	65,2223
+#define RC	66,2236
+#define RTA	67,2250
+#define RT	68,2265
+#define RTC	69,2279
+#define NC	70,2294
+typedef IndexSet* IndexSetPtr;72,2309
+typedef IndexSetPtr BorderIndexSets[BorderIndexSets73,2340
+typedef IndexSet* (*CreateIndexSetFunction)CreateIndexSetFunction74,2381
+static const CreateIndexSetFunction CreateIndexSet[CreateIndexSet102,4158
+const Type Snac_Parallel_Type 121,4741
+Snac_Parallel* Snac_Parallel_New(124,4792
+void Snac_Parallel_Init(136,5031
+Snac_Parallel* _Snac_Parallel_New(153,5481
+void _Snac_Parallel_Init(177,5988
+void _Snac_Parallel_Delete(217,7391
+void Snac_Parallel_Print(276,8805
+void Snac_Parallel_Build(291,9111
+static IndexSet* CreateLBA(378,12656
+static IndexSet* CreateLB(392,13104
+static IndexSet* CreateLBC(400,13341
+static IndexSet* CreateLA(414,13789
+static IndexSet* CreateL(422,14026
+static IndexSet* CreateLC(429,14195
+static IndexSet* CreateLTA(437,14432
+static IndexSet* CreateLT(451,14880
+static IndexSet* CreateLTC(459,15117
+static IndexSet* CreateBA(473,15565
+static IndexSet* CreateB(481,15802
+static IndexSet* CreateBC(488,15973
+static IndexSet* CreateA(496,16210
+static IndexSet* CreateC(503,16379
+static IndexSet* CreateTA(510,16549
+static IndexSet* CreateT(518,16786
+static IndexSet* CreateTC(525,16954
+static IndexSet* CreateRBA(533,17191
+static IndexSet* CreateRB(547,17639
+static IndexSet* CreateRBC(555,17876
+static IndexSet* CreateRA(569,18324
+static IndexSet* CreateR(577,18561
+static IndexSet* CreateRC(584,18731
+static IndexSet* CreateRTA(592,18968
+static IndexSet* CreateRT(606,19416
+static IndexSet* CreateRTC(614,19653
+
+libSnac/src/Restart.c,228
+	#define PATH_MAX 40,1760
+#define DEBUG43,1791
+void _Snac_Restart_ResetMinLengthScale(45,1806
+void _Snac_Restart_InitialCoords(60,2275
+void _Snac_Restart_InitialVelocities(90,3324
+void _Snac_Restart_InitialStress(171,6957
+
+libSnac/src/SnacSync.c,735
+typedef unsigned char	Snac_Byte;37,1420
+const Type SnacSync_Type 41,1488
+void* SnacSync_DefaultNew(47,1681
+SnacSync* SnacSync_New_Param(67,1994
+void SnacSync_Init(89,2346
+SnacSync* _SnacSync_New(120,3125
+void _SnacSync_Init(168,4152
+#define CHK_MPI(203,4887
+void _SnacSync_Delete(208,5017
+void _SnacSync_Print(230,5495
+void _SnacSync_Construct(249,5910
+void _SnacSync_Build(253,5993
+void _SnacSync_Initialise(257,6046
+void _SnacSync_Execute(261,6105
+void _SnacSync_Destroy(265,6159
+void SnacSync_Negotiate(273,6362
+void SnacSync_SendRecvInitialise(425,10275
+void SnacSync_SendRecv(548,13546
+void _SnacSync_FreePrivateArrays(630,15286
+Bool _SnacSync_IsUnique(654,15789
+void _SnacSync_Select_MinimizeComms(671,16103
+
+libSnac/src/StrainRate.c,30
+void Snac_StrainRate(49,1929
+
+libSnac/src/Stress.c,68
+#define Snac_Constitutive_CallEP(50,1945
+void Snac_Stress(53,2130
+
+libSnac/src/Tetrahedra.c,110
+Volume Tetrahedra_Volume(44,1910
+Area Tetrahedra_SurfaceArea(70,2512
+void Tetrahedra_SurfaceNormal(92,2932
+
+libSnac/src/TetrahedraTables.c,264
+const Element_NodeIndex TetraToNode[TetraToNode42,1798
+const unsigned int FaceToNode[FaceToNode56,2054
+const Tetrahedra_Index NodeToTetra[NodeToTetra64,2208
+const Tetrahedra_Index NodeToSurface[NodeToSurface75,3006
+const Index	TriToNode[TriToNode95,3972
+
+libSnac/src/UpdateElement.c,143
+#define Tetrahedra_Max_Propagation_Length 50,1981
+void Snac_UpdateElementMomentum(54,2035
+void Snac_UpdateElementMomentum_Restart(271,13733
+
+libSnac/src/UpdateNode.c,548
+#define getsign(53,2054
+#define sign(54,2127
+#define max(55,2164
+#define R 56,2208
+void Snac_UpdateNodeMomentum(60,2300
+void Snac_UpdateNodeMomentum_PreProcess(74,2804
+void getMaxTopoGrad(161,7151
+void getMaxTopoGrad_alongZ(262,11257
+void getMaxTopoGrad_alongX(310,13017
+void Snac_UpdateNodeMomentum_DiffTopo(359,14790
+double diffTopo_alongZ(508,21834
+double diffTopo_alongX(577,24581
+void Snac_UpdateNodeMomentum_UpdateInteriorTopo(647,27511
+void Snac_UpdateNodeMomentum_AdjustEdgeTopo(716,29972
+void Cart2Spherical_Coord(859,35420
+
+libSnac/tests/testInertialMass-inertialDensity-4-4-4.c,18
+int main(52,2021
+
+libSnac/tests/testSnacContext-4-4-4.c,219
+#define TOL 44,1845
+int				numProcessors;46,1866
+int				procToWatch;47,1888
+int				rank;48,1908
+MPI_Comm			CommWorld;49,1921
+Dictionary*			dictionary;50,1943
+Snac_Context*			snacContext;51,1969
+int main(53,1999
+
+libSnac/tests/testSnacContext-boundWalls-4-4-4.c,65
+struct _Node 45,1891
+struct _Element 49,1935
+int main(55,1987
+
+libSnac/tests/testStrainRate-strainRate-4-4-4.c,86
+#define TOL 43,1827
+struct _Node 45,1848
+struct _Element 49,1892
+int main(53,1942
+
+libSnac/tests/testStrainRate-tetra-strainRate-4-4-4.c,86
+#define TOL 43,1833
+struct _Node 45,1854
+struct _Element 49,1898
+int main(53,1948
+
+libSnac/tests/testStress-stress-4-4-4.c,65
+struct _Node 45,1844
+struct _Element 49,1888
+int main(53,1938
+
+libSnac/tests/testStress-tetra-strain-4-4-4.c,86
+#define TOL 44,1849
+struct _Node 46,1870
+struct _Element 50,1914
+int main(54,1964
+
+libSnac/tests/testStress-tetra-stress-4-4-4.c,65
+struct _Node 45,1845
+struct _Element 49,1889
+int main(53,1939
+
+libSnac/tests/TestStress.c,30
+void SnacTest_Stress(45,1842
+
+libSnac/tests/testTetrahedra-face-area-4-4-4.c,65
+struct _Node 44,1812
+struct _Element 48,1856
+int main(52,1906
+
+libSnac/tests/testTetrahedra-face-normal-4-4-4.c,65
+struct _Node 44,1816
+struct _Element 48,1860
+int main(52,1910
+
+libSnac/tests/testTetrahedra-volume-4-4-4.c,65
+struct _Node 44,1804
+struct _Element 48,1848
+int main(52,1898
+
+libSnac/tests/testUpdateElement-minLengthScale-4-4-4.c,65
+struct _Node 44,1866
+struct _Element 48,1910
+int main(52,1960
+
+libSnac/tests/testUpdateElement-tetra-face-area-4-4-4.c,65
+struct _Node 44,1816
+struct _Element 48,1860
+int main(52,1910
+
+libSnac/tests/testUpdateElement-tetra-face-normal-4-4-4.c,65
+struct _Node 44,1818
+struct _Element 48,1862
+int main(52,1912
+
+libSnac/tests/testUpdateElement-tetra-strain-4-4-4.c,65
+struct _Node 45,1860
+struct _Element 49,1904
+int main(53,1954
+
+libSnac/tests/testUpdateElement-tetra-stress-4-4-4.c,65
+struct _Node 45,1857
+struct _Element 49,1901
+int main(53,1951
+
+libSnac/tests/testUpdateElement-tetra-volume-4-4-4.c,65
+struct _Node 44,1813
+struct _Element 48,1857
+int main(52,1907
+
+libSnac/tests/testUpdateElement-volume-4-4-4.c,65
+struct _Node 44,1830
+struct _Element 48,1874
+int main(52,1924
+
+libSnac/tests/testUpdateNode-balance-4-4-4.c,18
+int main(52,2027
+
+libSnac/tests/testUpdateNode-coord-4-4-4.c,18
+int main(44,1846
+
+libSnac/tests/testUpdateNode-force-4-4-4.c,18
+int main(53,2026
+
+libSnac/tests/testUpdateNode-mass-4-4-4.c,18
+int main(52,2027
+
+libSnac/tests/testUpdateNode-velocity-4-4-4.c,39
+#define TOL 44,1849
+int main(46,1870
+
+libSnac/tests/TestUtilities.c,395
+MPI_Comm			CommWorld;47,1873
+int				rank;48,1895
+int				numProcessors;49,1908
+int				procToWatch;50,1930
+Dictionary*			dictionary;51,1950
+Snac_Context*			snacContext;52,1976
+XML_IO_Handler*			ioHandler;53,2005
+char*				filename;54,2034
+void SnacTest_SetUp(57,2055
+void SnacTest_TearDown(110,3922
+void SnacTest_PrintElementZeroInfo(121,4145
+void SnacTest_UpdateElementsNodes(177,7178
+
+plugins/conditionFunctions/Register.c,154
+const Type SnacCondFunc_Type 41,1786
+Index _SnacCondFunc_Register(44,1835
+void* _SnacCondFunc_DefaultNew(52,2116
+void _SnacCondFunc_Construct(68,2730
+
+plugins/conditionFunctions/SnacCondFunc_ElementCondFunc.c,78
+void _SnacCondFunc_AssignPhaseID(45,2000
+void _SnacCondFunc_DeadSea(71,2993
+
+plugins/conditionFunctions/SnacCondFunc_NodeCondFunc.c,85
+void _SnacCondFunc_ObliqueRift(44,1935
+void _SnacCondFunc_MaxwellBenchmark(68,2891
+
+plugins/customCartesianMesh/InitialConditions.c,121
+			#define PI 45,1853
+			#define PI 47,1885
+		#define PI 50,1920
+void _SnacCustomCartesian_InitialConditions(54,1955
+
+plugins/customCartesianMesh/Register.c,182
+const Type SnacCustomCartesian_Type 42,1817
+Index _SnacCustomCartesian_Register(45,1880
+void* _SnacCustomCartesian_DefaultNew(53,2094
+void _SnacCustomCartesian_Construct(69,2509
+
+plugins/cylinder_quadrant/Force.c,44
+void _SnacCylinderQuad_Force_Apply(43,1822
+
+plugins/cylinder_quadrant/InitialConditions.c,118
+			#define PI 45,1853
+			#define PI 47,1885
+		#define PI 50,1920
+void _SnacCylinderQuad_InitialConditions(54,1955
+
+plugins/cylinder_quadrant/Register.c,170
+const Type SnacCylinderQuad_Type 43,1836
+Index _SnacCylinderQuad_Register(46,1893
+void* _SnacCylinderQuad_DefaultNew(54,2098
+void _SnacCylinderQuad_Construct(69,2500
+
+plugins/cylindrical/InitialConditions.c,117
+			#define PI 45,1853
+			#define PI 47,1885
+		#define PI 50,1920
+void _SnacCylindrical_InitialConditions(54,1955
+
+plugins/cylindrical/Register.c,170
+const Type SnacCylindrical_Type 42,1817
+Index _SnacCylindrical_Register(45,1872
+void* _SnacCylindrical_DefaultNew(53,2074
+void _SnacCustomCartesian_Construct(69,2473
+
+plugins/dikeInjection/Constitutive.c,105
+#define PI 48,1922
+#define PI 50,1962
+#define PI 53,1991
+void SnacDikeInjection_Constitutive(59,2040
+
+plugins/dikeInjection/ConstructExtensions.c,53
+void _SnacDikeInjection_ConstructExtensions(43,1700
+
+plugins/dikeInjection/Context.c,42
+void SnacHillSlope_Context_Print(37,1572
+
+plugins/dikeInjection/Register.c,235
+const Type SnacDikeInjection_Type 44,1869
+ExtensionInfo_Index SnacDikeInjection_ContextHandle 46,1927
+Index _SnacDikeInjection_Register(48,1986
+void* _SnacDikeInjection_DefaultNew(56,2194
+void _SnacDikeInjection_Construct(72,2590
+
+plugins/elastic/Build.c,33
+void _SnacElastic_Build(40,1750
+
+plugins/elastic/Constitutive.c,40
+void _SnacElastic_Constitutive(40,1760
+
+plugins/elastic/ConstructExtensions.c,47
+void _SnacElastic_ConstructExtensions(42,1818
+
+plugins/elastic/DeleteExtensions.c,44
+void _SnacElastic_DeleteExtensions(40,1772
+
+plugins/elastic/InitialConditions.c,45
+void _SnacElastic_InitialConditions(40,1774
+
+plugins/elastic/Register.c,150
+const Type SnacElastic_Type 46,1925
+Index _SnacElastic_Register(49,1972
+void* _SnacElastic_DefaultNew(57,2162
+void _SnacElastic_Construct(73,2545
+
+plugins/exchanger/Build.c,35
+void _SnacExchanger_Build(44,1817
+
+plugins/exchanger/ConstructExtensions.c,49
+void _SnacExchanger_ConstructExtensions(44,1845
+
+plugins/exchanger/Context.c,42
+void SnacExchanger_Context_Print(41,1779
+
+plugins/exchanger/ExchangerVC.c,788
+const Type ExchangerVC_Type 37,1426
+VariableCondition* ExchangerVC_Factory(44,1617
+ExchangerVC*	ExchangerVC_DefaultNew(54,1912
+ExchangerVC*	ExchangerVC_New(84,2608
+void ExchangerVC_Init(119,3467
+ExchangerVC* _ExchangerVC_New(156,4682
+void _ExchangerVC_Init(223,6467
+void _ExchangerVC_ReadDictionary(241,6872
+void _ExchangerVC_Delete(245,6956
+void _ExchangerVC_Print(269,7363
+IndexSet* _ExchangerVC_GetSet(364,10472
+VariableCondition_VariableIndex _ExchangerVC_GetVariableCount(377,10996
+Variable_Index _ExchangerVC_GetVariableIndex(394,11539
+VariableCondition_ValueIndex _ExchangerVC_GetValueIndex(413,12223
+VariableCondition_ValueIndex _ExchangerVC_GetValueCount(443,13152
+VariableCondition_Value _ExchangerVC_GetValue(455,13612
+void _ExchangerVC_PrintConcise(467,14101
+
+plugins/exchanger/Register.c,215
+const Type SnacExchanger_Type 45,1831
+ExtensionInfo_Index SnacExchanger_ContextHandle;47,1881
+Index _SnacExchanger_Register(50,1932
+void* _SnacExchanger_DefaultNew(58,2128
+void _SnacExchanger_Construct(74,2519
+
+plugins/heterogeneities/Register.c,146
+const Type SnacHetero_Type 41,1784
+Index _SnacHetero_Register(44,1829
+void* _SnacHetero_DefaultNew(52,2104
+void _SnacHetero_Construct(70,2712
+
+plugins/heterogeneities/SnacHetero_InitialCondition.c,161
+void _SnacHetero_InitialCondition(41,1852
+void SnacHetero_Apply(76,3528
+void getHetero_Dictionary_Entry_Values(96,4597
+void  printHetero_Properties(166,8873
+
+plugins/heterogeneities/TestCondFunc.c,425
+void _Snac_Dyke(42,1801
+void _Snac_Sphere(50,2142
+void _Snac_Cylinder(59,2437
+void _Snac_CylinderH(68,2774
+void _Snac_CylinderV(75,2983
+void _Snac_UpperLimit(82,3226
+void _Snac_LowerLimit(87,3404
+void _Snac_RightLimit(92,3581
+void _Snac_LeftLimit(97,3760
+void _Snac_FrontLimit(102,3937
+void _Snac_BackLimit(107,4116
+void _SnacHetero_node 112,4293
+void _SnacHetero_element 130,5120
+void Is_coord_Inside(160,6468
+
+plugins/hillSlope/archive/ConstructExtensions.c,49
+void _SnacHillSlope_ConstructExtensions(48,1976
+
+plugins/hillSlope/archive/cuts.c,307
+	for(index_I = 0; index_I < numberWeakPoints;4,72
+	    randomNumber 9,278
+	    ijk[ijk10,337
+ 	    ijk[ijk11,402
+	    randomNumber 13,477
+	    ijk[ijk14,536
+ 	    ijk[ijk15,601
+	    randomNumber 17,649
+	    ijk[ijk18,708
+ 	    ijk[ijk19,773
+	    element_gI 27,1030
+	    element_lI 29,1156
+
+plugins/hillSlope/archive/InitialConditions.c,163
+			#define PI 56,2079
+			#define PI 58,2111
+		#define PI 61,2146
+#define min(65,2181
+	#define PATH_MAX 68,2236
+void _SnacHillSlope_InitialConditions(74,2285
+
+plugins/hillSlope/archive/Register.c,215
+const Type SnacHillSlope_Type 53,2062
+ExtensionInfo_Index SnacHillSlope_ContextHandle 55,2112
+Index _SnacHillSlope_Register(58,2168
+void* _SnacHillSlope_DefaultNew(66,2364
+void _SnacHillSlope_Construct(82,2755
+
+plugins/hillSlope/archive/tmp/cuts3.c,119
+		elementExt->heatFlux[heatFlux3,50
+		elementExt->heatFlux[heatFlux17,724
+		elementExt->heatFlux[heatFlux31,1398
+
+plugins/hillSlope/archive/tmp/VariableConditions.c,324
+	#define PATH_MAX 47,1906
+void _SnacTemperature_Top2BottomSweep(52,1986
+void _SnacTemperature_Top2BottomSweep_Spherical(76,3021
+void _SnacTemperature_Citcom_Compatible(116,4339
+void _SnacTemperature_InitialConditions(172,6597
+void SnacTemperature_BoundaryConditions(266,9697
+void SnacTemperature_HeatFluxBC(289,10410
+
+plugins/hillSlope/archive/unused/Output.c,39
+void _SnacHillSlope_DumpShear(40,1629
+
+plugins/hillSlope/Build.c,35
+void _SnacHillSlope_Build(37,1568
+
+plugins/hillSlope/ConstructExtensions.c,49
+void _SnacHillSlope_ConstructExtensions(43,1707
+
+plugins/hillSlope/Context.c,42
+void SnacHillSlope_Context_Print(37,1572
+
+plugins/hillSlope/CreateWeakPoints.c,286
+#define TRUE 46,1780
+#define FALSE 49,1816
+			#define PI 55,1881
+			#define PI 57,1926
+		#define PI 60,1961
+#define min(63,1995
+	#define PATH_MAX 65,2049
+#define DEBUG68,2080
+void SnacHillSlope_CreateWeakPoints(87,2455
+PlasticStrainFromCohesion(365,14395
+ShellSort(409,15650
+
+plugins/hillSlope/DeleteExtensions.c,46
+void _SnacHillSlope_DeleteExtensions(37,1590
+
+plugins/hillSlope/InitialConditions.c,208
+			#define PI 47,1786
+			#define PI 49,1831
+		#define PI 52,1866
+#define min(55,1900
+	#define PATH_MAX 57,1954
+#define TRUE 61,1998
+#define FALSE 64,2034
+void _SnacHillSlope_InitialConditions(70,2076
+
+plugins/hillSlope/Register.c,215
+const Type SnacHillSlope_Type 49,1839
+ExtensionInfo_Index SnacHillSlope_ContextHandle 51,1889
+Index _SnacHillSlope_Register(54,1945
+void* _SnacHillSlope_DefaultNew(62,2141
+void _SnacHillSlope_Construct(78,2532
+
+plugins/hillSlope/Track.c,181
+#define TRUE 41,1664
+#define FALSE 44,1700
+#define DEBUG248,1740
+#define DEBUG450,1772
+void SnacHillSlope_Track(52,1788
+CheckFallingFn(337,12889
+CheckStabilizingFn(364,13571
+
+plugins/hydroStaticIC/ConstructExtensions.c,128
+	#define PATH_MAX 43,1863
+void _SnacHydroStaticIC_ConstructExtensions(46,1894
+	#define					hydroStaticComponentCount	51,2161
+
+plugins/hydroStaticIC/Register.c,353
+const Type SnacHydroStaticIC_Type 45,1888
+static char RMIN_STR[RMIN_STR46,1945
+static char RMAX_STR[RMAX_STR47,1978
+static char MESH_STR[MESH_STR48,2011
+static double MIN[MIN49,2044
+static double MAX[MAX50,2092
+Index _SnacHydroStaticIC_Register(52,2139
+void* _SnacHydroStaticIC_DefaultNew(59,2343
+void _SnacHydroStaticIC_Construct(74,2738
+
+plugins/hydroStaticIC/VariableConditions.c,83
+void _SnacHydroStaticIC_IC(43,1832
+void _SnacHydroStaticIC_IC_Spherical(155,7214
+
+plugins/maxwell/Build.c,33
+void _SnacMaxwell_Build(42,1790
+
+plugins/maxwell/Constitutive.c,40
+void _SnacMaxwell_Constitutive(47,1883
+
+plugins/maxwell/ConstructExtensions.c,120
+	#define PATH_MAX 46,1896
+void _SnacVelocity_VariableCondition(49,1927
+void _SnacMaxwell_ConstructExtensions(63,2380
+
+plugins/maxwell/Context.c,40
+void SnacMaxwell_Context_Print(40,1748
+
+plugins/maxwell/DeleteExtensions.c,44
+void _SnacMaxwell_DeleteExtensions(42,1812
+
+plugins/maxwell/Element.c,40
+void SnacMaxwell_Element_Print(41,1773
+
+plugins/maxwell/InitialConditions.c,45
+void _SnacMaxwell_InitialConditions(43,1772
+
+plugins/maxwell/Node.c,39
+void SnacViscosity_Node_Print(40,1748
+
+plugins/maxwell/Output.c,130
+void _SnacMaxwell_WriteViscosity(45,1851
+void _SnacMaxwell_DumpViscosity(55,2119
+void _SnacMaxwell_CheckpointViscosity(88,3236
+
+plugins/maxwell/Register.c,260
+const Type SnacMaxwell_Type 50,2006
+ExtensionInfo_Index SnacMaxwell_ElementHandle;52,2052
+ExtensionInfo_Index SnacMaxwell_ContextHandle;53,2099
+Index _SnacMaxwell_Register(56,2148
+void* _SnacMaxwell_DefaultNew(64,2338
+void _SnacMaxwell_Construct(80,2721
+
+plugins/plastic/Constitutive.c,390
+#define PI 47,1878
+#define PI 49,1918
+#define PI 52,1947
+void SnacPlastic_Constitutive(58,1996
+int principal_stresses(249,9595
+int jacobi(295,10314
+int eigsrt(382,11975
+double **dmatrix(dmatrix412,12333
+void free_dmatrix(434,13018
+void nrerror(442,13218
+double *dvector(dvector451,13410
+int *ivector(ivector460,13663
+void free_dvector(469,13902
+void free_ivector(475,14040
+
+plugins/plastic/ConstructExtensions.c,120
+	#define PATH_MAX 43,1855
+void _SnacVelocity_VariableCondition(46,1886
+void _SnacPlastic_ConstructExtensions(70,2868
+
+plugins/plastic/Context.c,40
+void SnacPlastic_Context_Print(40,1754
+
+plugins/plastic/Element.c,40
+void SnacPlastic_Element_Print(40,1754
+
+plugins/plastic/InitialConditions.c,70
+#define PATH_MAX 41,1814
+void SnacPlastic_InitialConditions(44,1844
+
+plugins/plastic/Output.c,142
+void _SnacPlastic_WritePlasticStrain(45,1815
+void _SnacPlastic_DumpPlasticStrain(57,2097
+void _SnacPlastic_CheckpointPlasticStrain(83,2995
+
+plugins/plastic/Register.c,260
+const Type SnacPlastic_Type 48,1961
+ExtensionInfo_Index SnacPlastic_ElementHandle;50,2007
+ExtensionInfo_Index SnacPlastic_ContextHandle;51,2054
+Index _SnacPlastic_Register(54,2103
+void* _SnacPlastic_DefaultNew(62,2293
+void _SnacPlastic_Construct(78,2676
+
+plugins/plastic/Remesh.c,46
+void _SnacPlastic_InterpolateElement(43,1841
+
+plugins/plastic_BI/Constitutive.c,472
+#define PI 49,2060
+#define PI 51,2091
+#define PI 54,2120
+void SnacPlastic_Constitutive(59,2153
+int principal_stresses(238,9535
+void tred2(267,10254
+void tql2 386,12794
+int principal_stresses_orig(511,15234
+int jacobi(557,15958
+int eigsrt(644,17619
+double **dmatrix(dmatrix674,17977
+void free_dmatrix(696,18661
+void nrerror(704,18860
+double *dvector(dvector713,19052
+int *ivector(ivector722,19304
+void free_dvector(731,19542
+void free_ivector(737,19679
+
+plugins/plastic_BI/ConstructExtensions.c,74
+	#define PATH_MAX 43,1855
+void _SnacPlastic_ConstructExtensions(46,1886
+
+plugins/plastic_BI/Context.c,40
+void SnacPlastic_Context_Print(40,1754
+
+plugins/plastic_BI/Element.c,40
+void SnacPlastic_Element_Print(40,1754
+
+plugins/plastic_BI/InitialConditions.c,70
+#define PATH_MAX 41,1814
+void SnacPlastic_InitialConditions(44,1844
+
+plugins/plastic_BI/Output.c,142
+void _SnacPlastic_WritePlasticStrain(45,1815
+void _SnacPlastic_DumpPlasticStrain(57,2097
+void _SnacPlastic_CheckpointPlasticStrain(83,2995
+
+plugins/plastic_BI/Register.c,260
+const Type SnacPlastic_Type 49,1997
+ExtensionInfo_Index SnacPlastic_ElementHandle;51,2043
+ExtensionInfo_Index SnacPlastic_ContextHandle;52,2090
+Index _SnacPlastic_Register(54,2138
+void* _SnacPlastic_DefaultNew(62,2328
+void _SnacPlastic_Construct(78,2711
+
+plugins/plastic_BI/Remesh.c,189
+void _SnacPlastic_InterpolateElement(45,1909
+	enum					{ threeD,64,2748
+	enum					{ threeD, xy,64,2748
+	enum					{ threeD, xy, undefined 64,2748
+void _SnacPlastic_CopyElement(139,5894
+
+plugins/plasticSPR/Constitutive.c,391
+#define PI 47,1878
+#define PI 49,1918
+#define PI 52,1947
+void SnacPlastic_Constitutive(58,1996
+int principal_stresses(268,10613
+int jacobi(314,11332
+int eigsrt(401,12993
+double **dmatrix(dmatrix431,13351
+void free_dmatrix(453,14036
+void nrerror(461,14236
+double *dvector(dvector470,14428
+int *ivector(ivector479,14681
+void free_dvector(488,14920
+void free_ivector(494,15058
+
+plugins/plasticSPR/ConstructExtensions.c,74
+	#define PATH_MAX 43,1855
+void _SnacPlastic_ConstructExtensions(46,1886
+
+plugins/plasticSPR/Context.c,40
+void SnacPlastic_Context_Print(40,1754
+
+plugins/plasticSPR/Element.c,40
+void SnacPlastic_Element_Print(40,1754
+
+plugins/plasticSPR/InitialConditions.c,70
+#define PATH_MAX 41,1814
+void SnacPlastic_InitialConditions(44,1844
+
+plugins/plasticSPR/Mesh.c,37
+void SnacPlastic_Mesh_Print(47,1825
+
+plugins/plasticSPR/Node.c,37
+void SnacPlastic_Node_Print(40,1748
+
+plugins/plasticSPR/Output.c,142
+void _SnacPlastic_WritePlasticStrain(45,1815
+void _SnacPlastic_DumpPlasticStrain(57,2097
+void _SnacPlastic_CheckpointPlasticStrain(83,2995
+
+plugins/plasticSPR/Register.c,364
+const Type SnacPlastic_Type 50,1997
+ExtensionInfo_Index SnacPlastic_NodeHandle;52,2043
+ExtensionInfo_Index SnacPlastic_ElementHandle;53,2087
+ExtensionInfo_Index SnacPlastic_MeshHandle;54,2134
+ExtensionInfo_Index SnacPlastic_ContextHandle;55,2178
+Index _SnacPlastic_Register(58,2227
+void* _SnacPlastic_DefaultNew(66,2417
+void _SnacPlastic_Construct(82,2800
+
+plugins/plasticSPR/Remesh.c,131
+void _SnacPlastic_RecoverNode(49,1962
+void _SnacPlastic_InterpolateNode(212,8082
+void _SnacPlastic_InterpolateElement(273,10201
+
+plugins/plSeeds/InitialConditions.c,45
+void _SnacPlSeeds_InitialConditions(45,1883
+
+plugins/plSeeds/Register.c,150
+const Type SnacPlSeeds_Type 45,1892
+Index _SnacPlSeeds_Register(48,1939
+void* _SnacPlSeeds_DefaultNew(56,2129
+void _SnacPlSeeds_Construct(72,2512
+
+plugins/remesher/Build.c,68
+void _SnacRemesher_Build(43,1790
+void _SnacRemesher_Build(84,2928
+
+plugins/remesher/ConstructExtensions.c,691
+static char CONDITION_STR[CONDITION_STR46,1900
+static char TIMESTEPCRITERION_STR[TIMESTEPCRITERION_STR47,1949
+static char LENGTHCRITERION_STR[LENGTHCRITERION_STR48,2014
+static char OFF_STR[OFF_STR49,2075
+static char ON_STR[ON_STR50,2106
+static char ONTIMESTEP_STR[ONTIMESTEP_STR51,2135
+static char ONMINLENGTHSCALE_STR[ONMINLENGTHSCALE_STR52,2180
+static char ONBOTHTIMESTEPLENGTH_STR[ONBOTHTIMESTEPLENGTH_STR53,2237
+static char MESH_STR[MESH_STR54,2302
+static char MESHTYPE_STR[MESHTYPE_STR55,2335
+static char SPHERICAL_STR[SPHERICAL_STR56,2376
+static char CARTESIAN_STR[CARTESIAN_STR57,2419
+	#define PATH_MAX 59,2479
+void _SnacRemesher_ConstructExtensions(62,2510
+
+plugins/remesher/Context.c,146
+void SnacRemesher_Context_Print(41,1778
+void SnacRemesher_InterpolateNodeFunction(58,2426
+void SnacRemesher_InterpolateElementFunction(71,2858
+
+plugins/remesher/DeleteExtensions.c,45
+void _SnacRemesher_DeleteExtensions(43,1812
+
+plugins/remesher/EntryPoint.c,436
+const Type SnacRemesher_EntryPoint_Type 45,1871
+SnacRemesher_EntryPoint* SnacRemesher_EntryPoint_New(48,1942
+void SnacRemesher_EntryPoint_Init(60,2263
+SnacRemesher_EntryPoint* _SnacRemesher_EntryPoint_New(83,3084
+void _SnacRemesher_EntryPoint_Init(117,3788
+Func_Ptr _SnacRemesher_EntryPoint_GetRun(124,3954
+void _SnacRemesher_EntryPoint_Run_InterpolateNode(139,4402
+void _SnacRemesher_EntryPoint_Run_InterpolateElement(166,5225
+
+plugins/remesher/InitialConditions.c,170
+	#define PATH_MAX 52,2033
+void _SnacRemesher_InitialConditions(55,2064
+void _SnacRemesher_TriangulateXZPlane(503,15202
+void _SnacRemesher_InitialConditions(677,19667
+
+plugins/remesher/Mesh.c,38
+void SnacRemesher_Mesh_Print(47,1825
+
+plugins/remesher/Output.c,37
+void _SnacRemesher_DumpInfo(42,1792
+
+plugins/remesher/Register.c,370
+const Type SnacRemesher_Type 49,1982
+ExtensionInfo_Index SnacRemesher_ContextHandle;51,2030
+ExtensionInfo_Index SnacRemesher_MeshHandle;52,2078
+const Name SnacRemesher_EP_InterpolateNode 54,2124
+const Name SnacRemesher_EP_InterpolateElement 55,2205
+Index _SnacRemesher_Register(58,2294
+void* _SnacRemesher_DefaultNew(66,2487
+void _SnacRemesher_Construct(82,2874
+
+plugins/remesher/Remesh.c,69
+void _SnacRemesher_Remesh(49,1906
+void _SnacRemesher_Sync(196,7099
+
+plugins/remesher/RemeshCoords.c,636
+void _SnacRemesher_NewCoords(50,1933
+void _SnacRemesher_RemapSurface(180,5652
+Bool _SnacRemesher_PointInTri(262,8544
+Bool _SnacRemesher_SameSide(277,8885
+void _SnacRemesher_TriBarycenter(295,9308
+#define DIM 325,9968
+#define NODES_PER_ELEMENT 326,9982
+	#define MAX(329,10023
+	#define MIN(332,10084
+void _SnacRemesher_NewCoords_Cartesian(345,10417
+void _SnacRemesher_NewCoords_Spherical(1191,53956
+double isLargerThanZero(2084,99942
+double isLargerThanZero2(2091,100052
+double getSignedArea(2098,100204
+void xyz2tprCoord(2105,100317
+void tpr2xyzCoord(2111,100483
+void xyz2tprVel(2117,100639
+void tpr2xyzVel(2125,100946
+
+plugins/remesher/RemeshElements.c,412
+void _SnacRemesher_InterpolateElements(52,1975
+void _SnacRemesher_UpdateElements(232,8057
+void findClosestTet(257,8810
+void interpolateElement(339,11242
+void _SnacRemesher_InterpolateElement(428,13800
+void Tet_Barycenter(452,14590
+#define DIM 476,14972
+	#define SQR(479,14999
+	#define VECDIST3(482,15049
+void _SnacRemesher_InterpolateElement(485,15155
+void _SnacRemesher_InterpolateElements(530,17442
+
+plugins/remesher/RemeshNodes.c,686
+void _SnacRemesher_InterpolateNodes(54,2048
+#define det3_sub(161,5475
+#define TetrahedronVolume(167,5681
+#define isLargerThanZero(175,5886
+#define isLargerThanZero2(179,5980
+void interpolateNode(183,6106
+void _SnacRemesher_InterpolateNode(341,12357
+void SPR(424,15292
+#define DIM 593,22105
+#define NODES_PER_ELEMENT 594,22119
+#define MAX(597,22160
+#define MIN(600,22220
+#define det3_sub(604,22270
+#define TetrahedronVolume(609,22475
+const int nsub[nsub624,23075
+void _SnacRemesher_InterpolateNode(638,23230
+void _SnacRemesher_InterpolateNodes(692,24979
+void _SnacRemesher_InterpolateNodes_Cartesian(712,25548
+void _SnacRemesher_InterpolateNodes_Spherical(1112,41871
+
+plugins/remesher/TestCondFunc.c,205
+			#define PI 45,1836
+			#define PI 47,1868
+		#define PI 50,1903
+static double Bell(54,1938
+void _SnacRemesher_TestCondFunc(59,2012
+void _SnacRemesher_XFunc(74,2610
+void _SnacRemesher_YFunc(94,3321
+
+plugins/remesher/Utils.c,124
+Node_DomainIndex findClosestNode(48,1856
+Node_DomainIndex findClosestNodeInElement(132,3806
+Bool pointInElement(165,4701
+
+plugins/remesher_BI/Build.c,68
+void _SnacRemesher_Build(43,1790
+void _SnacRemesher_Build(84,2928
+
+plugins/remesher_BI/ConstructExtensions.c,691
+static char CONDITION_STR[CONDITION_STR46,1900
+static char TIMESTEPCRITERION_STR[TIMESTEPCRITERION_STR47,1949
+static char LENGTHCRITERION_STR[LENGTHCRITERION_STR48,2014
+static char OFF_STR[OFF_STR49,2075
+static char ON_STR[ON_STR50,2106
+static char ONTIMESTEP_STR[ONTIMESTEP_STR51,2135
+static char ONMINLENGTHSCALE_STR[ONMINLENGTHSCALE_STR52,2180
+static char ONBOTHTIMESTEPLENGTH_STR[ONBOTHTIMESTEPLENGTH_STR53,2237
+static char MESH_STR[MESH_STR54,2302
+static char MESHTYPE_STR[MESHTYPE_STR55,2335
+static char SPHERICAL_STR[SPHERICAL_STR56,2376
+static char CARTESIAN_STR[CARTESIAN_STR57,2419
+	#define PATH_MAX 59,2479
+void _SnacRemesher_ConstructExtensions(62,2510
+
+plugins/remesher_BI/Context.c,193
+void SnacRemesher_Context_Print(41,1778
+void SnacRemesher_InterpolateNodeFunction(59,2481
+void SnacRemesher_InterpolateElementFunction(72,2913
+void SnacRemesher_CopyElementFunction(90,3378
+
+plugins/remesher_BI/DeleteExtensions.c,45
+void _SnacRemesher_DeleteExtensions(43,1812
+
+plugins/remesher_BI/EntryPoint.c,492
+const Type SnacRemesher_EntryPoint_Type 45,1871
+SnacRemesher_EntryPoint* SnacRemesher_EntryPoint_New(48,1942
+void SnacRemesher_EntryPoint_Init(60,2263
+SnacRemesher_EntryPoint* _SnacRemesher_EntryPoint_New(83,3084
+void _SnacRemesher_EntryPoint_Init(117,3788
+Func_Ptr _SnacRemesher_EntryPoint_GetRun(124,3954
+void _SnacRemesher_EntryPoint_Run_InterpolateNode(143,4496
+void _SnacRemesher_EntryPoint_Run_InterpolateElement(170,5319
+void _SnacRemesher_EntryPoint_Run_CopyElement(197,6181
+
+plugins/remesher_BI/InitialConditions.c,170
+	#define PATH_MAX 52,2033
+void _SnacRemesher_InitialConditions(55,2064
+void _SnacRemesher_TriangulateXZPlane(503,15202
+void _SnacRemesher_InitialConditions(677,19667
+
+plugins/remesher_BI/Mesh.c,38
+void SnacRemesher_Mesh_Print(47,1825
+
+plugins/remesher_BI/Output.c,37
+void _SnacRemesher_DumpInfo(42,1792
+
+plugins/remesher_BI/Register.c,418
+const Type SnacRemesher_Type 49,1982
+ExtensionInfo_Index SnacRemesher_ContextHandle;51,2030
+ExtensionInfo_Index SnacRemesher_MeshHandle;52,2078
+const Name SnacRemesher_EP_InterpolateNode 54,2124
+const Name SnacRemesher_EP_InterpolateElement 55,2204
+const Name SnacRemesher_EP_CopyElement 56,2290
+Index _SnacRemesher_Register(59,2365
+void* _SnacRemesher_DefaultNew(67,2558
+void _SnacRemesher_Construct(83,2945
+
+plugins/remesher_BI/Remesh.c,69
+void _SnacRemesher_Remesh(51,1955
+void _SnacRemesher_Sync(225,9108
+
+plugins/remesher_BI/RemeshCoords.c,636
+void _SnacRemesher_NewCoords(50,1933
+void _SnacRemesher_RemapSurface(180,5652
+Bool _SnacRemesher_PointInTri(262,8544
+Bool _SnacRemesher_SameSide(277,8885
+void _SnacRemesher_TriBarycenter(295,9308
+#define DIM 325,9968
+#define NODES_PER_ELEMENT 326,9982
+	#define MAX(329,10023
+	#define MIN(332,10084
+void _SnacRemesher_NewCoords_Cartesian(345,10417
+void _SnacRemesher_NewCoords_Spherical(1191,53956
+double isLargerThanZero(2084,99942
+double isLargerThanZero2(2091,100052
+double getSignedArea(2098,100204
+void xyz2tprCoord(2105,100317
+void tpr2xyzCoord(2111,100483
+void xyz2tprVel(2117,100639
+void tpr2xyzVel(2125,100946
+
+plugins/remesher_BI/RemeshElements.c,636
+void _SnacRemesher_InterpolateElements(52,2003
+void _SnacRemesher_UpdateElements(133,5916
+void _SnacRemesher_InterpolateElement(158,6704
+	enum			{ threeD,181,7547
+	enum			{ threeD, xy,181,7547
+	enum			{ threeD, xy, undefined 181,7547
+void _SnacRemesher_CopyElement(294,14361
+void createBarycenterGrids(319,15076
+void computeCoefficients(451,20895
+	enum					{ threeD,465,21557
+	enum					{ threeD, xy,465,21557
+	enum					{ threeD, xy, undefined 465,21557
+void computeBaryCoords(608,28991
+	enum					{ threeD,627,29916
+	enum					{ threeD, xy,627,29916
+	enum					{ threeD, xy, undefined 627,29916
+int dist_compare(896,42466
+
+plugins/remesher_BI/RemeshNodes.c,121
+void _SnacRemesher_InterpolateNodes(51,1964
+void interpolateNode(152,5300
+void _SnacRemesher_InterpolateNode(213,7248
+
+plugins/remesher_BI/TestCondFunc.c,205
+			#define PI 45,1836
+			#define PI 47,1868
+		#define PI 50,1903
+static double Bell(54,1938
+void _SnacRemesher_TestCondFunc(59,2012
+void _SnacRemesher_XFunc(74,2610
+void _SnacRemesher_YFunc(94,3321
+
+plugins/remesher_BI/Utils.c,124
+Node_DomainIndex findClosestNode(48,1856
+Node_DomainIndex findClosestNodeInElement(132,3806
+Bool pointInElement(165,4707
+
+plugins/remesherSPR/Build.c,68
+void _SnacRemesher_Build(43,1790
+void _SnacRemesher_Build(84,2928
+
+plugins/remesherSPR/ConstructExtensions.c,691
+static char CONDITION_STR[CONDITION_STR46,1900
+static char TIMESTEPCRITERION_STR[TIMESTEPCRITERION_STR47,1949
+static char LENGTHCRITERION_STR[LENGTHCRITERION_STR48,2014
+static char OFF_STR[OFF_STR49,2075
+static char ON_STR[ON_STR50,2106
+static char ONTIMESTEP_STR[ONTIMESTEP_STR51,2135
+static char ONMINLENGTHSCALE_STR[ONMINLENGTHSCALE_STR52,2180
+static char ONBOTHTIMESTEPLENGTH_STR[ONBOTHTIMESTEPLENGTH_STR53,2237
+static char MESH_STR[MESH_STR54,2302
+static char MESHTYPE_STR[MESHTYPE_STR55,2335
+static char SPHERICAL_STR[SPHERICAL_STR56,2376
+static char CARTESIAN_STR[CARTESIAN_STR57,2419
+	#define PATH_MAX 59,2479
+void _SnacRemesher_ConstructExtensions(62,2510
+
+plugins/remesherSPR/Context.c,146
+void SnacRemesher_Context_Print(41,1778
+void SnacRemesher_InterpolateNodeFunction(58,2426
+void SnacRemesher_InterpolateElementFunction(71,2858
+
+plugins/remesherSPR/DeleteExtensions.c,45
+void _SnacRemesher_DeleteExtensions(43,1812
+
+plugins/remesherSPR/EntryPoint.c,492
+const Type SnacRemesher_EntryPoint_Type 45,1871
+SnacRemesher_EntryPoint* SnacRemesher_EntryPoint_New(48,1942
+void SnacRemesher_EntryPoint_Init(60,2263
+SnacRemesher_EntryPoint* _SnacRemesher_EntryPoint_New(83,3084
+void _SnacRemesher_EntryPoint_Init(117,3788
+Func_Ptr _SnacRemesher_EntryPoint_GetRun(124,3954
+void _SnacRemesher_EntryPoint_Run_RecoverNode(139,4402
+void _SnacRemesher_EntryPoint_Run_InterpolateNode(161,5010
+void _SnacRemesher_EntryPoint_Run_InterpolateElement(188,5833
+
+plugins/remesherSPR/InitialConditions.c,170
+	#define PATH_MAX 52,2033
+void _SnacRemesher_InitialConditions(55,2064
+void _SnacRemesher_TriangulateXZPlane(503,15200
+void _SnacRemesher_InitialConditions(677,19665
+
+plugins/remesherSPR/Mesh.c,38
+void SnacRemesher_Mesh_Print(47,1825
+
+plugins/remesherSPR/Output.c,37
+void _SnacRemesher_DumpInfo(42,1792
+
+plugins/remesherSPR/Register.c,418
+const Type SnacRemesher_Type 49,1982
+ExtensionInfo_Index SnacRemesher_ContextHandle;51,2030
+ExtensionInfo_Index SnacRemesher_MeshHandle;52,2078
+const Name SnacRemesher_EP_RecoverNode 54,2124
+const Name SnacRemesher_EP_InterpolateNode 55,2198
+const Name SnacRemesher_EP_InterpolateElement 56,2279
+Index _SnacRemesher_Register(59,2368
+void* _SnacRemesher_DefaultNew(67,2561
+void _SnacRemesher_Construct(83,2948
+
+plugins/remesherSPR/Remesh.c,35
+void _SnacRemesher_Remesh(49,1906
+
+plugins/remesherSPR/RemeshCoords.c,631
+void _SnacRemesher_NewCoords(50,1933
+void _SnacRemesher_RemapSurface(180,5652
+Bool _SnacRemesher_PointInTri(262,8544
+Bool _SnacRemesher_SameSide(277,8885
+void _SnacRemesher_TriBarycenter(295,9308
+#define DIM 325,9968
+#define NODES_PER_ELEMENT 326,9982
+	#define MAX(329,10023
+	#define MIN(332,10084
+void _SnacRemesher_NewCoords_Cartesian(345,10417
+void _SnacRemesher_NewCoords_Spherical(1187,53535
+double isLargerThanZero(2076,99100
+double isLargerThanZero2(2083,99210
+double getSignedArea(2090,99362
+void xyz2tprCoord(2097,99475
+void tpr2xyzCoord(2103,99641
+void xyz2tprVel(2109,99797
+void tpr2xyzVel(2117,100104
+
+plugins/remesherSPR/RemeshElements.c,139
+void _SnacRemesher_InterpolateElements(49,1824
+void _SnacRemesher_UpdateElements(65,2429
+void _SnacRemesher_InterpolateElement(105,3978
+
+plugins/remesherSPR/RemeshNodes.c,338
+void _SnacRemesher_RecoverNodes(54,2048
+void _SnacRemesher_InterpolateNodes(70,2578
+#define det3_sub(174,6048
+#define TetrahedronVolume(180,6254
+#define isLargerThanZero(188,6459
+#define isLargerThanZero2(192,6553
+void interpolateNode(196,6679
+void _SnacRemesher_InterpolateNode(257,8664
+void _SnacRemesher_RecoverNode(348,11839
+
+plugins/remesherSPR/TestCondFunc.c,205
+			#define PI 45,1836
+			#define PI 47,1868
+		#define PI 50,1903
+static double Bell(54,1938
+void _SnacRemesher_TestCondFunc(59,2012
+void _SnacRemesher_XFunc(74,2610
+void _SnacRemesher_YFunc(94,3321
+
+plugins/remesherSPR/Utils.c,124
+Node_DomainIndex findClosestNode(48,1856
+Node_DomainIndex findClosestNodeInElement(132,3806
+Bool pointInElement(165,4701
+
+plugins/restarter/InitialConditions.c,224
+	#define PATH_MAX 41,1792
+#define DEBUG44,1823
+void _SnacRestart_resetMinLengthScale(46,1838
+void _SnacRestart_InitialCoords(61,2318
+void _SnacRestart_InitialVelocities(91,3378
+void _SnacRestart_InitialStress(118,4382
+
+plugins/restarter/Register.c,199
+	#define PATH_MAX 41,1782
+#define DEBUG44,1813
+const Type SnacRestart_Type 47,1861
+Index _SnacRestart_Register(50,1908
+void* _SnacRestart_DefaultNew(58,2098
+void _SnacRestart_Construct(74,2481
+
+plugins/restarter_old/InitialConditions.c,236
+	#define PATH_MAX 41,1792
+#define DEBUG44,1823
+void _SnacRestartOld_resetMinLengthScale(46,1838
+void _SnacRestartOld_InitialCoords(61,2322
+void _SnacRestartOld_InitialVelocities(91,3386
+void _SnacRestartOld_InitialStress(118,4394
+
+plugins/restarter_old/Register.c,211
+	#define PATH_MAX 41,1782
+#define DEBUG44,1813
+const Type SnacRestartOld_Type 47,1861
+Index _SnacRestartOld_Register(50,1914
+void* _SnacRestartOld_DefaultNew(58,2113
+void _SnacRestartOld_Construct(74,2508
+
+plugins/spherical/ConstructExtensions.c,408
+static char MESH_STR[MESH_STR45,1879
+static char THETAMIN_STR[THETAMIN_STR46,1912
+static char THETAMAX_STR[THETAMAX_STR47,1953
+static char PHIMIN_STR[PHIMIN_STR48,1994
+static char PHIMAX_STR[PHIMAX_STR49,2031
+static char RMIN_STR[RMIN_STR50,2068
+static char RMAX_STR[RMAX_STR51,2101
+static double MIN[MIN52,2134
+static double MAX[MAX53,2182
+void _SnacSpherical_ConstructExtensions(55,2231
+
+plugins/spherical/InitialConditions.c,115
+			#define PI 46,1871
+			#define PI 48,1903
+		#define PI 51,1938
+void _SnacSpherical_InitialConditions(55,1973
+
+plugins/spherical/Mesh.c,39
+void SnacSpherical_Mesh_Print(40,1748
+
+plugins/spherical/Node.c,46
+void SnacExchangerForceBC_Node_Print(40,1748
+
+plugins/spherical/Register.c,212
+const Type SnacSpherical_Type 44,1868
+ExtensionInfo_Index SnacSpherical_MeshHandle;46,1918
+Index _SnacSpherical_Register(49,1966
+void* _SnacSpherical_DefaultNew(57,2162
+void _SnacSpherical_Construct(73,2553
+
+plugins/spherical/Remesh.c,210
+			#define PI 46,1849
+			#define PI 48,1881
+		#define PI 51,1916
+void _SnacExchangerForceBC_Remesh(55,1951
+void _SnacExchangerForceBC_NewCoords(70,2465
+void _SnacExchangerForceBC_InterpolateNodes(80,2813
+
+plugins/spherical/TestCondFunc.c,454
+			#define PI 46,1854
+			#define PI 48,1886
+		#define PI 51,1921
+#define myr2sec 54,1955
+#define deg2rad 55,1997
+#define rad2deg 56,2024
+#define omegaL 57,2051
+#define omegaR 58,2091
+void _SnacSpherical_applyPlateVx(60,2131
+void _SnacSpherical_applyPlateVy(97,3481
+void _SnacSpherical_applyPlateVz(134,4831
+void _SnacSpherical_applyInitialVx(171,6181
+void _SnacSpherical_applyInitialVy(211,8161
+void _SnacSpherical_applyInitialVz(251,10141
+
+plugins/temperature/Build.c,37
+void _SnacTemperature_Build(41,1771
+
+plugins/temperature/ConstructExtensions.c,78
+	#define PATH_MAX 45,1902
+void _SnacTemperature_ConstructExtensions(48,1933
+
+plugins/temperature/Context.c,44
+void SnacTemperature_Context_Print(40,1751
+
+plugins/temperature/DeleteExtensions.c,48
+void _SnacTemperature_DeleteExtensions(41,1793
+
+plugins/temperature/Element.c,44
+void SnacTemperature_Element_Print(41,1770
+
+plugins/temperature/Heat.c,110
+void SnacTemperature_LoopNodes(47,1894
+void Snac_Heat(64,2509
+void UpdateAverageTemp_LoopElements(143,6138
+
+plugins/temperature/HeatFlux.c,71
+void SnacTemperature_LoopElements(47,1931
+void Snac_HeatFlux(61,2341
+
+plugins/temperature/Node.c,41
+void SnacTemperature_Node_Print(40,1748
+
+plugins/temperature/Output.c,127
+void _SnacTemperature_WriteTemp(43,1811
+void _SnacTemperature_DumpTemp(55,2079
+void _SnacTemperature_CheckpointTemp(80,2885
+
+plugins/temperature/Register.c,340
+const Type SnacTemperature_Type 53,2059
+ExtensionInfo_Index SnacTemperature_ContextHandle;55,2113
+ExtensionInfo_Index SnacTemperature_ElementHandle;56,2164
+ExtensionInfo_Index SnacTemperature_NodeHandle;57,2215
+Index _SnacTemperature_Register(60,2265
+void* _SnacTemperature_DefaultNew(68,2467
+void _SnacTemperature_Construct(84,2866
+
+plugins/temperature/Remesh.c,47
+void _SnacTemperature_InterpolateNode(44,1836
+
+plugins/temperature/VariableConditions.c,324
+	#define PATH_MAX 47,1906
+void _SnacTemperature_Top2BottomSweep(52,1986
+void _SnacTemperature_Top2BottomSweep_Spherical(76,3021
+void _SnacTemperature_Citcom_Compatible(116,4339
+void _SnacTemperature_InitialConditions(177,6682
+void SnacTemperature_BoundaryConditions(257,9459
+void SnacTemperature_HeatFluxBC(280,10173
+
+plugins/tractionBC/Force.c,42
+void _SnacTractionBC_Force_Apply(43,1822
+
+plugins/tractionBC/Register.c,162
+const Type SnacTractionBC_Type 42,1805
+Index _SnacTractionBC_Register(45,1858
+void* _SnacTractionBC_DefaultNew(53,2057
+void _SnacTractionBC_Construct(68,2451
+
+plugins/viscoplastic/Constitutive.c,406
+#define PI 51,2152
+#define PI 53,2183
+#define PI 56,2212
+void SnacViscoPlastic_Constitutive(61,2245
+	int principal_stresses(528,21381
+	int jacobi(574,22135
+	int eigsrt(661,23872
+	double **dmatrix(dmatrix691,24256
+	void free_dmatrix(713,24960
+	void nrerror(721,25166
+	double *dvector(dvector730,25365
+	int *ivector(ivector739,25626
+	void free_dvector(748,25873
+	void free_ivector(754,26016
+
+plugins/viscoplastic/ConstructExtensions.c,125
+	#define PATH_MAX 44,1881
+void _SnacVelocity_VariableCondition(47,1912
+void _SnacViscoPlastic_ConstructExtensions(59,2274
+
+plugins/viscoplastic/Context.c,45
+void SnacViscoPlastic_Context_Print(40,1745
+
+plugins/viscoplastic/Element.c,45
+void SnacViscoPlastic_Element_Print(40,1745
+
+plugins/viscoplastic/InitialConditions.c,96
+#define min(44,1868
+#define PATH_MAX 46,1922
+void SnacViscoPlastic_InitialConditions(49,1952
+
+plugins/viscoplastic/Output.c,362
+void _SnacViscoPlastic_WritePlasticStrain(46,1849
+void _SnacViscoPlastic_DumpPlasticStrain(57,2145
+void _SnacViscoPlastic_CheckpointPlasticStrain(82,3004
+void _SnacViscoPlastic_WriteViscosity(110,3999
+void _SnacViscoPlastic_DumpViscosity(121,4283
+void _SnacViscoPlastic_CheckpointViscosity(154,5429
+void _SnacViscoPlastic_DumpPlasticStrainTensor(188,6536
+
+plugins/viscoplastic/Register.c,290
+const Type SnacViscoPlastic_Type 48,1958
+ExtensionInfo_Index SnacViscoPlastic_ElementHandle;50,2014
+ExtensionInfo_Index SnacViscoPlastic_ContextHandle;51,2066
+Index _SnacViscoPlastic_Register(54,2120
+void* _SnacViscoPlastic_DefaultNew(62,2325
+void _SnacViscoPlastic_Construct(78,2728
+
+plugins/viscoplastic/Remesh.c,51
+void _SnacViscoPlastic_InterpolateElement(43,1841
+
+plugins/viscoplastic_BI/Constitutive.c,478
+#define PI 50,2102
+#define PI 52,2133
+#define PI 55,2162
+void SnacViscoPlastic_Constitutive(60,2195
+int principal_stresses(387,15507
+void tred2(416,16226
+void tql2 535,18766
+int principal_stresses_orig(659,21205
+int jacobi(705,21929
+int eigsrt(792,23590
+double **dmatrix(dmatrix822,23948
+void free_dmatrix(844,24632
+void nrerror(852,24831
+double *dvector(dvector861,25023
+int *ivector(ivector870,25275
+void free_dvector(879,25513
+void free_ivector(885,25650
+
+plugins/viscoplastic_BI/ConstructExtensions.c,79
+	#define PATH_MAX 40,1791
+void _SnacViscoPlastic_ConstructExtensions(43,1822
+
+plugins/viscoplastic_BI/Context.c,45
+void SnacViscoPlastic_Context_Print(40,1745
+
+plugins/viscoplastic_BI/Destroy.c,40
+void _SnacViscoPlastic_Destroy(42,1773
+
+plugins/viscoplastic_BI/Element.c,45
+void SnacViscoPlastic_Element_Print(40,1745
+
+plugins/viscoplastic_BI/InitialConditions.c,96
+#define min(43,1849
+#define PATH_MAX 45,1903
+void SnacViscoPlastic_InitialConditions(48,1933
+
+plugins/viscoplastic_BI/Mesh.c,42
+void SnacViscoPlastic_Mesh_Print(47,1825
+
+plugins/viscoplastic_BI/Node.c,42
+void SnacViscoPlastic_Node_Print(40,1748
+
+plugins/viscoplastic_BI/Output.c,305
+void _SnacViscoPlastic_WritePlasticStrain(46,1849
+void _SnacViscoPlastic_DumpPlasticStrain(57,2145
+void _SnacViscoPlastic_CheckpointPlasticStrain(82,3004
+void _SnacViscoPlastic_WriteViscosity(112,4044
+void _SnacViscoPlastic_DumpViscosity(123,4328
+void _SnacViscoPlastic_CheckpointViscosity(156,5474
+
+plugins/viscoplastic_BI/Register.c,290
+const Type SnacViscoPlastic_Type 50,2015
+ExtensionInfo_Index SnacViscoPlastic_ElementHandle;52,2071
+ExtensionInfo_Index SnacViscoPlastic_ContextHandle;53,2123
+Index _SnacViscoPlastic_Register(55,2176
+void* _SnacViscoPlastic_DefaultNew(63,2381
+void _SnacViscoPlastic_Construct(79,2784
+
+plugins/viscoplastic_BI/Remesh.c,199
+void _SnacViscoPlastic_InterpolateElement(45,1909
+	enum					{ threeD,64,2797
+	enum					{ threeD, xy,64,2797
+	enum					{ threeD, xy, undefined 64,2797
+void _SnacViscoPlastic_CopyElement(139,6023
+
+plugins/viscoplasticSPR/Constitutive.c,396
+#define PI 51,2121
+#define PI 53,2152
+#define PI 56,2181
+void SnacViscoPlastic_Constitutive(61,2214
+int principal_stresses(386,15426
+int jacobi(432,16145
+int eigsrt(519,17806
+double **dmatrix(dmatrix549,18164
+void free_dmatrix(571,18848
+void nrerror(579,19047
+double *dvector(dvector588,19239
+int *ivector(ivector597,19491
+void free_dvector(606,19729
+void free_ivector(612,19866
+
+plugins/viscoplasticSPR/ConstructExtensions.c,79
+	#define PATH_MAX 40,1791
+void _SnacViscoPlastic_ConstructExtensions(43,1822
+
+plugins/viscoplasticSPR/Context.c,45
+void SnacViscoPlastic_Context_Print(40,1745
+
+plugins/viscoplasticSPR/Destroy.c,40
+void _SnacViscoPlastic_Destroy(42,1773
+
+plugins/viscoplasticSPR/Element.c,45
+void SnacViscoPlastic_Element_Print(40,1745
+
+plugins/viscoplasticSPR/InitialConditions.c,96
+#define min(43,1849
+#define PATH_MAX 45,1903
+void SnacViscoPlastic_InitialConditions(48,1933
+
+plugins/viscoplasticSPR/Mesh.c,42
+void SnacViscoPlastic_Mesh_Print(47,1825
+
+plugins/viscoplasticSPR/Node.c,42
+void SnacViscoPlastic_Node_Print(40,1748
+
+plugins/viscoplasticSPR/Output.c,362
+void _SnacViscoPlastic_WritePlasticStrain(46,1849
+void _SnacViscoPlastic_DumpPlasticStrain(57,2145
+void _SnacViscoPlastic_CheckpointPlasticStrain(82,3004
+void _SnacViscoPlastic_WriteViscosity(116,4176
+void _SnacViscoPlastic_DumpViscosity(127,4460
+void _SnacViscoPlastic_CheckpointViscosity(160,5606
+void _SnacViscoPlastic_DumpPlasticStrainTensor(194,6713
+
+plugins/viscoplasticSPR/Register.c,404
+const Type SnacViscoPlastic_Type 51,2015
+ExtensionInfo_Index SnacViscoPlastic_NodeHandle;53,2071
+ExtensionInfo_Index SnacViscoPlastic_ElementHandle;54,2120
+ExtensionInfo_Index SnacViscoPlastic_MeshHandle;55,2172
+ExtensionInfo_Index SnacViscoPlastic_ContextHandle;56,2221
+Index _SnacViscoPlastic_Register(58,2274
+void* _SnacViscoPlastic_DefaultNew(66,2479
+void _SnacViscoPlastic_Construct(82,2882
+
+plugins/viscoplasticSPR/Remesh.c,146
+void _SnacViscoPlastic_RecoverNode(49,1962
+void _SnacViscoPlastic_InterpolateNode(233,9138
+void _SnacViscoPlastic_InterpolateElement(297,11480
+
+plugins/vpSeeds/InitialConditions.c,45
+void _SnacVPSeeds_InitialConditions(46,1927
+
+plugins/vpSeeds/Register.c,150
+const Type SnacVPSeeds_Type 46,1936
+Index _SnacVPSeeds_Register(49,1983
+void* _SnacVPSeeds_DefaultNew(57,2173
+void _SnacVPSeeds_Construct(73,2556
+
+plugins/winkler/Force.c,409
+void _SnacWinklerForce_Apply(56,2886
+void _SnacWinklerForce_Apply_South(171,7613
+void _SnacWinklerForce_Apply_North(250,12774
+void _SnacWinklerForce_Apply_East(329,17905
+void _SnacWinklerForce_Apply_West(408,23065
+void _SnacWinklerForce_Apply_Spherical(487,28195
+void _SnacWinklerForce_Apply_Spherical_North(607,33259
+void _SnacWinklerForce_Apply_Spherical_South(695,37664
+double getRadius(783,42135
+
+plugins/winkler/InitialConditions.c,77
+	#define PATH_MAX 42,1827
+void _SnacWinklerForce_InitialConditions(45,1858
+
+plugins/winkler/Output.c,76
+    #define PATH_MAX 43,1822
+void _SnacWinklerForce_DumpInitForce(46,1856
+
+plugins/winkler/Register.c,349
+const Type SnacWinklerForce_Type 47,1916
+static char RMIN_STR[RMIN_STR48,1971
+static char RMAX_STR[RMAX_STR49,2004
+static char MESH_STR[MESH_STR50,2037
+static double MIN[MIN51,2070
+static double MAX[MAX52,2118
+Index _SnacWinklerForce_Register(54,2165
+void* _SnacWinklerForce_DefaultNew(62,2370
+void _SnacWinklerForce_Construct(77,2772
+
+Python/Bindings/SnacContext/bindings.c,328
+struct PyMethodDef Snac_Context_Python_Methods[Snac_Context_Python_Methods42,1758
+struct _Node 49,2124
+struct _Element 53,2168
+char Snac_Context_Python_New__doc__[Snac_Context_Python_New__doc__58,2237
+char Snac_Context_Python_New__name__[Snac_Context_Python_New__name__59,2306
+PyObject* Snac_Context_Python_New(60,2354
+
+Python/Bindings/SnacContext/init.c,98
+char Snac_Context_Python__doc__[Snac_Context_Python__doc__36,1649
+void initSnacContext(38,1734
+
+Python/Bindings/SnacContext/misc.c,227
+char Snac_Context_Python_copyright__doc__[Snac_Context_Python_copyright__doc__36,1628
+char Snac_Context_Python_copyright__name__[Snac_Context_Python_copyright__name__37,1678
+PyObject* Snac_Context_Python_copyright(39,1739
+
+snac2dx/snac2dx.c,557
+	#define PATH_MAX 43,1766
+char		path[path49,1900
+FILE*		strainRateIn;50,1922
+FILE*		stressIn;51,1943
+FILE*		pisosIn;52,1960
+FILE*		coordIn;53,1976
+FILE*		velIn;54,1992
+FILE*		forceIn;55,2006
+FILE*		phaseIn;56,2022
+FILE*		tempIn;57,2038
+FILE*		apsIn;58,2053
+FILE*		viscIn;59,2067
+FILE*		irhIn;60,2082
+unsigned int	elementGlobalSize[elementGlobalSize62,2097
+int 			doTemp 63,2132
+int 			doForce 64,2151
+int 			doAps 65,2171
+int 			doIRh 66,2189
+int 			doHPr 67,2207
+int 			doVisc 68,2225
+int main(70,2245
+void ConvertTimeStep(203,6203
+
+snac2restart/snac2restart.c,972
+#define PATH_MAX 44,1924
+#define Tetrahedra_Count 47,1978
+char		origPath[origPath52,2116
+char		readPath[readPath53,2142
+char		writePath[writePath54,2168
+FILE*		stressTensorIn;55,2195
+FILE*		initCoordIn;56,2218
+FILE*		coordIn;57,2238
+FILE*		velIn;58,2254
+FILE*		tempIn;59,2268
+FILE*		apsIn;60,2283
+FILE*		avgApsIn;61,2297
+FILE*		minLengthIn;63,2337
+FILE*		forceIn;64,2357
+unsigned int	elementGlobalSize[elementGlobalSize66,2374
+unsigned int	rank_array[rank_array67,2409
+unsigned int	elementLocalSize[elementLocalSize68,2437
+unsigned int 	doForce 69,2471
+unsigned int 	doTemp 70,2498
+unsigned int 	doAps 71,2524
+unsigned int 	doAvgAps 72,2549
+unsigned int 	restartStep 73,2577
+const double	velocityDampingFactor 75,2610
+const unsigned	numStressVectorComponent 77,2653
+const unsigned	numStressComponentsPerElement 78,2734
+void checkArgumentTypeStrict(80,2831
+void checkArgumentType(105,3923
+int main(172,6347
+void ConvertTimeStep(347,11649
+
+snac2restart_old/snac2restart_old.c,580
+	#define PATH_MAX 43,1906
+	#define Tetrahedra_Count 46,1961
+char		readPath[readPath52,2101
+char		writePath[writePath53,2127
+FILE*		stressTensorIn;54,2154
+FILE*		coordIn;55,2177
+FILE*		velIn;56,2193
+FILE*		tempIn;57,2207
+FILE*		apsIn;58,2222
+FILE*		minLengthIn;60,2259
+FILE*		forceIn;61,2279
+unsigned int	elementLocalSize[elementLocalSize63,2296
+unsigned int 	doTemp 64,2330
+unsigned int 	doAps 65,2356
+unsigned int 	restartStep 66,2381
+const double	velocityDampingFactor 68,2414
+void checkArgumentType(71,2458
+int main(123,4215
+void ConvertTimeStep(261,8588
+
+snac2vtk/snac2vtk.c,1299
+			#define PI 44,1901
+			#define PI 46,1946
+		#define PI 49,1981
+	#define PATH_MAX 55,2053
+	#define Tetrahedra_Count 58,2108
+#define ROTATE(61,2144
+#define NR_END 64,2242
+#define FREE_ARG 65,2259
+#define SIGN(66,2283
+#define SWAP(68,2322
+struct stressMeasures 88,3065
+char		path[path108,3546
+FILE*		strainRateIn;109,3568
+FILE*		stressIn;110,3589
+FILE*		stressTensorIn;111,3606
+FILE*		hydroPressureIn;112,3629
+FILE*		coordIn;113,3653
+FILE*		velIn;114,3669
+FILE*		forceIn;115,3683
+FILE*		phaseIn;116,3699
+FILE*		tempIn;117,3715
+FILE*		apsIn;118,3730
+FILE*		viscIn;119,3744
+unsigned int	elementLocalSize[elementLocalSize121,3760
+int 			doTemp 122,3794
+int 			doForce 123,3813
+int 			doAps 124,3833
+int 			doHPr 125,3851
+int 			doVisc 126,3869
+double			failureAngle 127,3888
+const unsigned	numStressVectorComponent 128,3918
+const unsigned	numStressComponentsPerElement 129,3999
+int main(131,4090
+void ConvertTimeStep(334,10016
+int DerivePrincipalStresses(1115,43293
+int jacobi(1161,44123
+int eigsrt(1248,45811
+double **dmatrix(dmatrix1278,46169
+void free_dmatrix(1300,46899
+void nrerror(1308,47105
+double *dvector(dvector1316,47240
+int *ivector(ivector1325,47505
+void free_dvector(1334,47756
+void free_ivector(1340,47897
+DeriveStressMeasures(1364,48405
+
+snac2vtk/snac2vtk_legacy.c,513
+	#define PATH_MAX 43,1759
+char		path[path49,1893
+FILE*		strainRateIn;50,1915
+FILE*		stressIn;51,1936
+FILE*		pisosIn;52,1953
+FILE*		coordIn;53,1969
+FILE*		velIn;54,1985
+FILE*		forceIn;55,1999
+FILE*		phaseIn;56,2015
+FILE*		tempIn;57,2031
+FILE*		apsIn;58,2046
+FILE*		viscIn;59,2060
+unsigned int	elementGlobalSize[elementGlobalSize61,2076
+int 			doTemp 62,2111
+int 			doForce 63,2130
+int 			doAps 64,2150
+int 			doHPr 65,2168
+int 			doVisc 66,2186
+int main(68,2206
+void ConvertTimeStep(193,5864
+
+snac2vtk_old/snac2vtk_old.c,1157
+			#define PI 43,1881
+			#define PI 45,1926
+		#define PI 48,1961
+	#define PATH_MAX 54,2033
+#define ROTATE(58,2065
+#define NR_END 61,2163
+#define FREE_ARG 62,2180
+#define SIGN(63,2204
+#define SWAP(65,2243
+struct stressMeasures 85,2986
+char		path[path104,3430
+FILE*		strainRateIn;105,3452
+FILE*		stressIn;106,3473
+FILE*		stressTensorIn;107,3490
+FILE*		hydroPressureIn;108,3513
+FILE*		coordIn;109,3537
+FILE*		velIn;110,3553
+FILE*		forceIn;111,3567
+FILE*		phaseIn;112,3583
+FILE*		tempIn;113,3599
+FILE*		apsIn;114,3614
+FILE*		viscIn;115,3628
+unsigned int	elementLocalSize[elementLocalSize117,3644
+int 			doTemp 118,3678
+int 			doForce 119,3697
+int 			doAps 120,3717
+int 			doHPr 121,3735
+int 			doVisc 122,3753
+double			failureAngle 123,3772
+int main(125,3803
+void ConvertTimeStep(334,9872
+int DerivePrincipalStresses(981,36217
+int jacobi(1027,37047
+int eigsrt(1114,38735
+double **dmatrix(dmatrix1144,39093
+void free_dmatrix(1166,39823
+void nrerror(1174,40029
+double *dvector(dvector1182,40164
+int *ivector(ivector1191,40429
+void free_dvector(1200,40680
+void free_ivector(1206,40821
+DeriveStressMeasures(1230,41329
+
+src/main.c,65
+struct _Node 52,2047
+struct _Element 56,2091
+int main(61,2152
+
+tests/oedometer/snac_soln.c,1172
+			#define PI 43,1881
+			#define PI 45,1926
+		#define PI 48,1961
+	#define PATH_MAX 54,2033
+#define ROTATE(58,2065
+#define NR_END 61,2163
+#define FREE_ARG 62,2180
+#define SIGN(63,2204
+#define SWAP(65,2243
+struct stressMeasures 85,2986
+char		path[path105,3446
+FILE*		strainRateIn;106,3468
+FILE*		stressIn;107,3489
+FILE*		stressTensorIn;108,3506
+FILE*		hydroPressureIn;109,3529
+FILE*		coordIn;110,3553
+FILE*		velIn;111,3569
+FILE*		forceIn;112,3583
+FILE*		phaseIn;113,3599
+FILE*		tempIn;114,3615
+FILE*		apsIn;115,3630
+FILE*		viscIn;116,3644
+FILE*		snacOut;117,3659
+unsigned int	elementLocalSize[elementLocalSize119,3676
+int 			doTemp 120,3710
+int 			doForce 121,3729
+int 			doAps 122,3749
+int 			doHPr 123,3767
+int 			doVisc 124,3785
+double			failureAngle 125,3804
+int main(127,3835
+void ConvertTimeStep(267,8100
+int DerivePrincipalStresses(330,10139
+int jacobi(376,10971
+int eigsrt(463,12659
+double **dmatrix(dmatrix493,13017
+void free_dmatrix(515,13747
+void nrerror(523,13953
+double *dvector(dvector531,14088
+int *ivector(ivector540,14353
+void free_dvector(549,14604
+void free_ivector(555,14745
+DeriveStressMeasures(579,15253
+
+VMake/Config/glucifer/conftest.c,16
+int main(7,142
+
+VMake/Config/gsl/conftest.c,29
+#define DIM 4,54
+main 7,73
+
+VMake/Config/mpi/conftest.c,15
+int main(3,18
+
+VMake/Config/OpenGl/conftest.c,15
+int main(2,20
+
+VMake/Config/PETSc/conftest.c,15
+int main(3,20
+
+VMake/Config/PICellerator/conftest.c,16
+int main(7,150
+
+VMake/Config/python/conftest.c,15
+int main(3,21
+
+VMake/Config/StgDomain/conftest.c,16
+int main(6,117
+
+VMake/Config/StGermain/conftest.c,15
+int main(5,84
+
+VMake/Config/StgFEM/conftest.c,16
+int main(6,111
+
+VMake/Config/Underworld/conftest.c,16
+int main(9,186
+
+VMake/Config/X11/conftest.c,15
+int main(2,22
+
+VMake/Config/Xanthus/conftest.c,16
+int main(9,180
+
+VMake/meta-template.c,141
+#define Stg_Component_Stringify(31,1675
+#define Stg_Component_Metadata_Create(34,1789
+#define Stg_Component_Metadata_Create_Macro(35,1879
+
+VMake/SystemTests/C-CompilerType/conftest.c,15
+int main(2,19
+
+VMake/SystemTests/Endian/conftest.c,15
+int main(3,20
+
+VMake/SystemTests/Fortran-Symbol/symbol.c,79
+void method(3,20
+void method_(8,80
+void method__(13,153
+void METHOD(18,227
+
+VMake/SystemTests/LongSize/conftest.c,15
+int main(2,19
+
+plugins/hillSlope/archive/cuts2.c,0

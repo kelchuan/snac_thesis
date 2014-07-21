@@ -1,0 +1,15 @@
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacDikeInjection\" -DPLUGIN_NAME=SnacDikeInjection -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacDikeInjectionmodule.so/Constitutive.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      Constitutive.c
+Constitutive.c:127:14: warning: incompatible pointer types initializing 'Coord *' (aka 'double (*)[3]') with an expression of type 'Coord' (aka 'double [3]'); take the address with & [-Wincompatible-pointer-types]
+             Coord* tetNodeCoord = Snac_Element_NodeCoord( context, element_lI, TetraToNode[tetra_I][node_lI] );
+                    ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                   &
+Constitutive.c:67:28: warning: unused variable 'viscoplasticElement' [-Wunused-variable]
+        SnacViscoPlastic_Element* viscoplasticElement = ExtensionManager_Get( context->mesh->elementExtensionMgr, element, SnacViscoPlastic_ElementHandle );
+                                  ^
+Constitutive.c:77:9: warning: unused variable 'elem_dX' [-Wunused-variable]
+        double elem_dX = 0.0;
+               ^
+3 warnings generated.
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacDikeInjection\" -DPLUGIN_NAME=SnacDikeInjection -Wall -g   -o /Users/Tian/opt/snac/build/tmp/mod-SnacDikeInjectionmodule.so/SnacDikeInjectionmodule.so /Users/Tian/opt/snac/build/tmp/mod-SnacDikeInjectionmodule.so/Constitutive.o /Users/Tian/opt/snac/build/tmp/mod-SnacDikeInjectionmodule.so/ConstructExtensions.o /Users/Tian/opt/snac/build/tmp/mod-SnacDikeInjectionmodule.so/Context.o /Users/Tian/opt/snac/build/tmp/mod-SnacDikeInjectionmodule.so/Register.o  -bundle -flat_namespace -undefined suppress  -L/Users/Tian/opt/snac/build/lib   -L/Users/Tian/opt/snac/build/lib  -lSnac -lStGermain   -L/Users/Tian/opt/snac/build/lib -lmpi -L/opt/local/lib/openmpi-mp -lmpi -L/sw/lib    -L/opt/local/lib -lxml2 -lz -lpthread -liconv -lm   -lm -lmx            
+ld: warning: directory not found for option '-L/sw/lib'
+/bin/cp -f /Users/Tian/opt/snac/build/tmp/mod-SnacDikeInjectionmodule.so/SnacDikeInjectionmodule.so /Users/Tian/opt/snac/build/lib/SnacDikeInjectionmodule.so

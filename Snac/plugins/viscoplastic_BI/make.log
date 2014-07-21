@@ -1,0 +1,33 @@
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacViscoPlastic\" -DPLUGIN_NAME=SnacViscoPlastic -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Element.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      Element.c
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacViscoPlastic\" -DPLUGIN_NAME=SnacViscoPlastic -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Context.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      Context.c
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacViscoPlastic\" -DPLUGIN_NAME=SnacViscoPlastic -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/ConstructExtensions.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      ConstructExtensions.c
+ConstructExtensions.c:50:42: warning: unused variable 'tmpElementExt' [-Wunused-variable]
+        SnacViscoPlastic_Element*               tmpElementExt = ExtensionManager_Get(
+                                                ^
+1 warning generated.
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacViscoPlastic\" -DPLUGIN_NAME=SnacViscoPlastic -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Constitutive.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      Constitutive.c
+Constitutive.c:372:97: warning: passing 'const char [30]' to parameter of type 'char *' discards qualifiers [-Wincompatible-pointer-types-discards-qualifiers]
+                                Journal_Firewall( (0>1), "In %s: \"mohrcoulomb\" is the only available yield criterion.\n", __func__ );
+                                                                                                                            ^~~~~~~~
+/Users/Tian/opt/snac/build/include/StGermain/Base/IO/Journal.h:226:60: note: passing argument to parameter 'fmt' here
+        int Journal_Firewall( int expression, void* stream, char* fmt, ... );
+                                                                  ^
+Constitutive.c:112:13: warning: unused variable 'srexponent2' [-Wunused-variable]
+                double                          srexponent2 = material->srexponent2;
+                                                ^
+Constitutive.c:111:13: warning: unused variable 'srexponent1' [-Wunused-variable]
+                double                          srexponent1 = material->srexponent1;
+                                                ^
+3 warnings generated.
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacViscoPlastic\" -DPLUGIN_NAME=SnacViscoPlastic -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Output.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      Output.c
+Output.c:100:9: warning: unused variable 'avgPlasticStrain' [-Wunused-variable]
+                float avgPlasticStrain = elementExt->aps;
+                      ^
+1 warning generated.
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacViscoPlastic\" -DPLUGIN_NAME=SnacViscoPlastic -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Register.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      Register.c
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacViscoPlastic\" -DPLUGIN_NAME=SnacViscoPlastic -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/InitialConditions.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      InitialConditions.c
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacViscoPlastic\" -DPLUGIN_NAME=SnacViscoPlastic -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Destroy.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      Destroy.c
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacViscoPlastic\" -DPLUGIN_NAME=SnacViscoPlastic -Wall -g    -c -o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Remesh.o -I/Users/Tian/opt/snac/build/include   -I/Users/Tian/opt/snac/build/include/StGermain -I/Users/Tian/opt/snac/build/include   -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2      Remesh.c
+mpicc-openmpi-mp -pipe  -DVERSION=\"0\" -DCURR_MODULE_NAME=\"SnacViscoPlastic\" -DPLUGIN_NAME=SnacViscoPlastic -Wall -g   -o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/SnacViscoPlasticmodule.so /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Element.o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Context.o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/ConstructExtensions.o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Constitutive.o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Output.o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Register.o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/InitialConditions.o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Destroy.o /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/Remesh.o  -bundle -flat_namespace -undefined suppress  -L/Users/Tian/opt/snac/build/lib   -L/Users/Tian/opt/snac/build/lib  -lSnac -lStGermain  -L/Users/Tian/opt/snac/build/lib -lmpi -L/opt/local/lib/openmpi-mp -lmpi -L/sw/lib    -L/opt/local/lib -lxml2 -lz -lpthread -liconv -lm   -lm -lmx            
+ld: warning: directory not found for option '-L/sw/lib'
+/bin/cp -f /Users/Tian/opt/snac/build/tmp/mod-SnacViscoPlasticmodule.so/SnacViscoPlasticmodule.so /Users/Tian/opt/snac/build/lib/SnacViscoPlasticmodule.so

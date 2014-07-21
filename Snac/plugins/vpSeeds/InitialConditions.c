@@ -84,6 +84,9 @@ void _SnacVPSeeds_InitialConditions( void* _context, void* data ) {
         ijk[0] = global_I_range * rand_num;
         ijk[0] = decomp->elementGlobal3DCounts[0]/2 - (ijk[0]-global_I_range/2);
 
+	ijk[0] = 31;
+	ijk[1] = 1;
+
         incZ = 0;
         //ijk[2] -= global_K_range/2;
         while( incZ < global_K_range && ijk[2] >=0 && ijk[2] < decomp->elementGlobal3DCounts[2] ) {
@@ -112,7 +115,7 @@ void _SnacVPSeeds_InitialConditions( void* _context, void* data ) {
                                        ijk[2],
                                        viscoplasticElement->plasticStrain[tetra_I] );
                     }
-                    //fprintf(stderr,"me=%d seeds(%d/%d) ijk=%d %d %d\n",context->rank,index_I,NUM_SEED,ijk[0],ijk[1],ijk[2]);
+                    fprintf(stderr,"me=%d seeds(%d/%d) ijk=%d %d %d\n",context->rank,index_I,NUM_SEED,ijk[0],ijk[1],ijk[2]);
                 }
                 ijk[1]--;
             }

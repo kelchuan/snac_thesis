@@ -1,0 +1,11 @@
+prefix=/Users/Tian/opt/snac/build
+exec_prefix=/Users/Tian/opt/snac/build/bin
+libdir=/Users/Tian/opt/snac/build/lib
+includedir=/Users/Tian/opt/snac/build/include
+
+Name: StGermain
+Description: The StGermain Framework
+Version: 0
+Requires:
+Libs: -L/Users/Tian/opt/snac/build/lib -lStGermain      -L/Users/Tian/opt/snac/build/lib -lmpi -L/opt/local/lib/openmpi-mp -lmpi -L/sw/lib    -L/opt/local/lib -lxml2 -lz -lpthread -liconv -lm   -lm -lmx   -L/usr/lib:/usr/include/lib -ldl                        
+Cflags: -I/Users/Tian/opt/snac/build/include       -I/opt/local/include/openmpi-mp   -I/opt/local/include/libxml2     -I/usr/lib:/usr/include/include      

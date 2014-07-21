@@ -37,7 +37,8 @@
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Be Bourne compatible
-if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
+#if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
+if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null ; then
 	emulate sh
 	NULLCMD=:
 elif test -n "${BASH_VERSION+set}" && (set -o posix) >/dev/null 2>&1; then

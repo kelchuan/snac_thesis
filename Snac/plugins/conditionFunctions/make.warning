@@ -1,0 +1,5 @@
+SnacCondFunc_ElementCondFunc.c:47:17: warning: unused variable 'element' [-Wunused-variable]
+SnacCondFunc_ElementCondFunc.c:121:27: warning: unused variable 'global_K_range' [-Wunused-variable]
+SnacCondFunc_ElementCondFunc.c:119:27: warning: unused variable 'global_I_range' [-Wunused-variable]
+3 warnings generated.
+ld: warning: directory not found for option '-L/sw/lib'

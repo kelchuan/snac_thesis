@@ -95,6 +95,14 @@ void _SnacTemperature_ConstructExtensions( void* _context, void* data ) {
 	ConditionFunction_Register_Add(
 		context->condFunc_Register,
 		ConditionFunction_New( _SnacTemperature_Citcom_Compatible, "SnacTemperature_Citcom_Compatible" ) );
+#if 0
+	ConditionFunction_Register_Add(
+		context->condFunc_Register,
+		ConditionFunction_New( _SnacTemperature_Mfactoric, "SnacTemperature_Mfactoric" ) );
+	ConditionFunction_Register_Add(
+		context->condFunc_Register,
+	        ConditionFunction_New( _SnacTemperature_Mfactorbc, "SnacTemperature_Mfactorbc" ) );
+#endif
 
 	/* Temperature variables */
 	contextExt->topTemp = Dictionary_Entry_Value_AsDouble(
@@ -102,6 +110,10 @@ void _SnacTemperature_ConstructExtensions( void* _context, void* data ) {
 
 	contextExt->bottomTemp = Dictionary_Entry_Value_AsDouble(
 		Dictionary_GetDefault( context->dictionary, "bottomTemp", Dictionary_Entry_Value_FromDouble( 1300.0f ) ) );
+
+	contextExt->v_stretch = Dictionary_Entry_Value_AsDouble(
+		 Dictionary_GetDefault( context->dictionary, "v_stretch", Dictionary_Entry_Value_FromDouble( 3.0f ) ) );
+
 
 	/* Build the temperature IC and BC managers */
 	temperatureBCsDict = Dictionary_Entry_Value_AsDictionary( Dictionary_Get( context->dictionary, "temperatureBCs" ) );

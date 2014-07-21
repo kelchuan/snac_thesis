@@ -1,0 +1,2 @@
+20 5 40 1 1 1 20 5 40
+(global element numbers)[3]=(proc numbers)[3]*(local element numbers)[3]

@@ -106,3 +106,30 @@ void _SnacCondFunc_DeadSea( Index element_lI, Variable_Index var_I, void* _conte
 		element->tetra[tetra_I].material_I=matID;
 	}
 }
+void _SnacCondFunc_Mfactor( Index element_lI, Variable_Index var_I, void* _context, void* result ){
+	Snac_Context*		context = (Snac_Context*)_context;
+	Snac_Element*		element = Snac_Element_At( context, element_lI );
+	Material_Index*		material_I = (Material_Index*)result;
+	
+	/* Stuff for convenience */
+	Mesh*				mesh = context->mesh;
+	MeshLayout*			layout = (MeshLayout*)mesh->layout;
+	HexaMD*				decomp = (HexaMD*)layout->decomp;
+	IJK				ijk;
+    	Element_GlobalIndex		global_I_range = decomp->elementGlobal3DCounts[0];
+    	Element_GlobalIndex		global_J_range = decomp->elementGlobal3DCounts[1];
+    	Element_GlobalIndex		global_K_range = decomp->elementGlobal3DCounts[2];
+
+	Element_GlobalIndex		element_gI = _MeshDecomp_Element_LocalToGlobal1D( decomp, element_lI );
+        unsigned int			matID=0, tetra_I;	
+
+	RegularMeshUtils_Element_1DTo3D( decomp, element_gI, &ijk[0], &ijk[1], &ijk[2] );
+
+	if(  (ijk[1] < 2*global_J_range/3) )
+		matID=1;
+	(*material_I)=matID;
+
+	for( tetra_I = 0; tetra_I < Tetrahedra_Count; tetra_I++ ) {
+		element->tetra[tetra_I].material_I=matID;
+	}
+}

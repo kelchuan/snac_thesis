@@ -1,0 +1,3 @@
+Constitutive.c:96:67: error: expected ')'
+1 warning and 1 error generated.
+make[1]: *** [/Users/Tian/opt/snac/build/tmp/mod-SnacDikeInjectionmodule.so/Constitutive.o] Error 1

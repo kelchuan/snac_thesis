@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<VTKFile type= "PStructuredGrid"  version= "0.1" byte_order="LittleEndian" compressor="vtkZLibDataCompressor">
+  <PStructuredGrid WholeExtent="0 20 0 5 0 40" GhostLevel="0">
+    <PPointData>
+        <PDataArray type="Float64" Name="Velocity" NumberOfComponents="3"/>
+        <PDataArray type="Float64" Name="Force" NumberOfComponents="3"/>
+        <PDataArray type="Float64" Name="Temperature"/>
+    </PPointData>
+    <PCellData>
+        <PDataArray type="Float64" Name="Plastic strain"/>
+        <PDataArray type="Float64" Name="Strain rate"/>
+        <PDataArray type="Float64" Name="Sxx"/>
+        <PDataArray type="Float64" Name="Syy"/>
+        <PDataArray type="Float64" Name="Szz"/>
+        <PDataArray type="Float64" Name="Sxy"/>
+        <PDataArray type="Float64" Name="Sxz"/>
+        <PDataArray type="Float64" Name="Syz"/>
+        <PDataArray type="Float64" Name="Pressure"/>
+        <PDataArray type="Float64" Name="Phase"/>
+        <PDataArray type="Float64" Name="Viscosity"/>
+    </PCellData>
+    <PPoints>
+        <PDataArray type="Float64" NumberOfComponents="3"/>
+    </PPoints>
+    <Piece Extent="0 20 0 5 0 40" Source="./snac.0.002000.vts"/>
+  </PStructuredGrid>
+</VTKFile>
